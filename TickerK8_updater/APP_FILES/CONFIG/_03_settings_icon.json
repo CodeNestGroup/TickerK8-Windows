@@ -1,0 +1,20 @@
+{
+  "main_logo_c_n_g_label": "/TickerK8_updater/APP_FILES/IMG/ICONS/codenestgroup_logo.svg",
+  "main_logo_ticker_label": "/TickerK8_updater/APP_FILES/IMG/ICONS/tickerk8_logo.svg",
+  "main_settings_open_button":[
+    "/TickerK8_updater/APP_FILES/IMG/ICONS/vintage_elegance_settings_light_icon.svg",
+    "/TickerK8_updater/APP_FILES/IMG/ICONS/vintage_elegance_settings_dark_icon.svg"
+  ],
+  "main_settings_social_media_instagram_button": [
+    "/TickerK8_updater/APP_FILES/IMG/ICONS/vintage_elegance_instagram_light_icon.svg",
+    "/TickerK8_updater/APP_FILES/IMG/ICONS/vintage_elegance_instagram_dark_icon.svg"
+  ],
+  "main_settings_social_media_github_button": [
+    "/TickerK8_updater/APP_FILES/IMG/ICONS/vintage_elegance_github_light_icon.svg",
+    "/TickerK8_updater/APP_FILES/IMG/ICONS/vintage_elegance_github_dark_icon.svg"
+  ],
+  "main_settings_social_media_discord_button": [
+    "/TickerK8_updater/APP_FILES/IMG/ICONS/vintage_elegance_discord_light_icon.svg",
+    "/TickerK8_updater/APP_FILES/IMG/ICONS/vintage_elegance_discord_dark_icon.svg"
+  ]
+}
