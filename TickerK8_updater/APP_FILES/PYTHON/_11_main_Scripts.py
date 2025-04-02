@@ -539,7 +539,7 @@ class controller_settings:
     def check_updates(self):
         try: # Try check and setup update if is.
             github_version = None
-            response = urllib.request.urlopen('https://api.github.com/repos/CodeNestGroup/TickerK8-Linux/releases/latest') # Open latest update from github
+            response = urllib.request.urlopen('https://api.github.com/repos/CodeNestGroup/TickerK8-Windows/releases/latest') # Open latest update from github
             if response.getcode() == 200:
                 github_version = json.loads(response.read().decode())
             else:
@@ -601,7 +601,7 @@ class controller_update:
     def get_releses(self):
         try: # Try open url, debug
             try: # Try connect
-                response = urllib.request.urlopen('https://api.github.com/repos/CodeNestGroup/TickerK8-Linux/releases') # Get latest relaeses from github
+                response = urllib.request.urlopen('https://api.github.com/repos/CodeNestGroup/TickerK8-Windows/releases') # Get latest relaeses from github
             except Exception: # Except fail connection
                 self.main_self.controller_report.write_log(f"{Exception} \n {traceback.format_exc()}")
                 self.main_self.notification_text_label.setText(self.main_self.settings_translate_file['notification_text_label'][self.main_self.settings_config_file['__language__']][3])
