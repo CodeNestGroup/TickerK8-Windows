@@ -1,0 +1,12 @@
+{
+  "__CSS__": "/TickerK8_app/app_files/CSS/_00_main_light.css",
+  "__SQL__": {
+    "_host_": "localhost",
+    "_user_": "client",
+    "_password_": "Qwerty123456#",
+    "_database_": "TickerK8"
+  },
+  "__WINDOW__": {
+    "_size_": "fullscreen"
+  }
+}

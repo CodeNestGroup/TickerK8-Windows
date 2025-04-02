@@ -1,0 +1,377 @@
+#main_widget{
+    background-color: #252525;
+}
+#main_changelog_scroll{
+    background-color: #1e1e1e;
+    border: 0;
+}
+#main_changelog_widget{
+    background-color: #00000000;
+    border: 0;
+}
+#main_changelog_scroll_error_label{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    padding: 1em;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+
+}
+.main_changelog_buttons{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    padding: 1em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.main_changelog_buttons:hover{
+    background-color: #031913;
+}
+
+#main_settings_widget{
+    background-color: #252525;
+}
+
+.main_settings_buttons{
+    background-color: #1e1e1e;
+    border: 0;
+    margin: 0.75em;
+}
+.main_settings_buttons:hover{
+    background-color: #031913;
+}
+#main_update_widget{
+    background-color: #1e1e1e;
+    border: 0;
+    border-top: 1px solid #FAFAFA;
+}
+#main_update_progress{
+    color: #00000000;
+    background-color: #00000000;
+    border: 0;
+    margin-top: 2px;
+    text-align: right;
+    font-weight: 600;
+}
+#main_update_progress::chunk{
+    background-color: #031913;
+    margin: 0;
+}
+#main_update_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    border: 0;
+    padding: 0.5em;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#main_start_button{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+#main_start_button:hover{
+    background-color: #031913;
+}
+#settings_widget{
+    background-color: #252525;
+    border: 0;
+}
+#settings_exit_button{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border:0;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+#settings_exit_button:hover{
+    background-color: #031913;
+}
+#settings_menu_scroll{
+    background-color: #353535;
+    border: 0;
+}
+#settings_menu_scroll_widget{
+    background-color: #00000000;
+}
+.settings_menu_buttons{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+.settings_menu_buttons:hover{
+    background-color: #031913;
+}
+#settings_sub_scroll{
+    background-color: #252525;
+    border: 0;
+}
+#settings_sub_scroll_widget{
+    background-color: #252525;
+}
+.settings_sub_widgets{
+    background-color: #252525;
+}
+.settings_sub_titles{
+    color: #FAFAFA;
+    padding: 1em;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+.settings_sub_subtitles{
+    color: #FAFAFA;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.settings_sub_subcombobox{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    margin: 2em 1em 2em 1em;
+    padding: 1em;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.settings_sub_subcombobox:hover{
+    background-color: #031913;
+}
+.settings_sub_subcombobox QAbstractItemView{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+}
+.settings_sub_subcombobox::drop-down{
+    border: 0;
+    background-color: #1e1e1e;
+}
+.settings_sub_subbuttons{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    margin: 2em 1em 2em 1em;
+    padding: 0.5em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.settings_sub_subbuttons:hover{
+    background-color: #031913;
+}
+.settings_update_sub_titles{
+    color: #FAFAFA;
+    padding: 2em;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+#settings_update_version_desc_label{
+    color: #FAFAFA;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+#report_widget{
+    background-color: #1e1e1e;
+}
+#report_textfield_textarea{
+    color: #FAFAFA;
+    background-color: #252525;
+    border: 0;
+    padding: 0.2em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5em;
+}
+.report_buttons{
+    color: #FAFAFA;
+    background-color: #252525;
+    border: 0;
+    padding: 1em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+.report_buttons:hover{
+    background-color: #031913;
+}
+#update_background_widget{
+    background-color: #1e1e1e;
+}
+#update_changlog_widget{
+    background-color: #252525;
+}
+#update_changlog_title_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#update_changlog_scroll{
+    background-color: #00000000;
+    border: 0;
+}
+#update_changlog_scroll_widget{
+    background-color: #353535;
+}
+#update_changlog_scroll_title_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#update_changlog_scroll_date_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#update_changlog_scroll_text_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    padding: 0.5em;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+
+#update_changlog_download_button{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#update_changlog_download_button:hover{
+    background-color: #031913;
+}
+#update_changlog_exit_button{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#update_changlog_exit_button:hover{
+    background-color: #031913;
+}
+#notification_background_widget{
+    background-color: #00000000;
+}
+#notification_background_label{
+    background-color: #65000000;
+}
+#notification_widget{
+    background-color: #252525;
+    padding: 0.5em;
+}
+#notification_text_label{
+    color: #FAFAFA;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#notification_exit_button{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    padding: 0.1em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#notification_exit_button:hover{
+    background-color: #031913;
+}
+
+#alert_background_widget{
+    background-color: #65000000;
+}
+#alert_widget{
+    background-color: #252525;
+    padding: 1em;
+}
+#alert_text_label{
+    color: #FAFAFA;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#alert_download_button{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    padding: 0.3em;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#alert_download_button:hover{
+    background-color: #031913;
+}
+#alert_exit_button{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    padding: 0.3em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#alert_exit_button:hover{
+    background-color: #031913;
+}
+
+QScrollBar:vertical{
+    border: none;
+    background: #1e1e1e;
+    width: 8px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #353535;
+    min-height: 15px;
+    border-radius: 2px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #031913;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}

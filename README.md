@@ -1,1 +1,0 @@
-# TickerK8-Windows

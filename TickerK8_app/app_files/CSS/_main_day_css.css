@@ -1,0 +1,61 @@
+#Main_widget{
+    background-color: #EDF4F2;
+}
+#Main_top_widget{
+    background-color: #C0E6DC;
+}
+.Main_page_top_window_buttons{
+    color: #031913;
+    background-color: #FDFFFC;
+    border: 2px solid #DAE7E4;
+    border-radius: 1.2em;
+    padding: 0.5em;
+}
+.Main_page_top_window_buttons:hover{
+    background-color: #DDE4E2;
+    border-color: #DDE4E2;
+}
+#Main_top_button_search_button{
+    color: #031913;
+    background-color: #FDFFFC;
+    border: 2px solid #DAE7E4;
+    border-radius: 1.2em;
+    padding: 1em;
+}
+#Main_top_button_search_button:hover{
+    background-color: #DDE4E2;
+    border-color: #DDE4E2;
+}
+
+#Main_center_left_label{
+    background-color: #00000000;
+}
+#Main_center_center_label{
+    background-color: #00000000;
+}
+
+.Main_page_down_left_button{
+    color: #031913;
+    background-color: #C0E6DC;
+    border: 0;
+}
+.Main_page_down_center_botton{
+    color: #031913;
+    background-color: #C0E6DC;
+    border: 0;
+}
+.Main_page_down_right_button{
+    color: #031913;
+    background-color: #C0E6DC;
+    border: 0;
+}
+.Main_page_down_right_button:hover{
+    background-color: #00000000;
+}
+.Main_page_down_right_label{
+    color: #EDF4F2;
+    background-color: #45000000;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.7em;
+}
