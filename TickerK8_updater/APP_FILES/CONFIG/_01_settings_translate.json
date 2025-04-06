@@ -1,15 +1,25 @@
 {
+   "main_changelog_error_widget": [
+      ["No connection.", "Brak połączenia"],
+      ["Loading", "Ładowanie"]
+   ],
    "main_update_label": [
-      ["Starting download...", "Uruchamianie pobierania..."],
+      ["Creating backup...", "Tworzenie kopii zapasowej..."],
       ["Downloading...","Pobieranie..."],
       ["Unpacking...", "Rozpakowywanie..."],
       ["Checking compatibility...", "Sprawdzanie kontatybilności..."],
       ["Installing...", "Instalowanie..."],
+      ["Deleting backup...", "Usuwanie kopii zapasowej..."],
       ["You have actuall version", "Masz aktualną wersje"],
-      ["Files of udapte are inncorrect", "Pliki sa niepoprawne."],
-      ["Update stopped. Waiting for connection."]
+      ["Update failed", "Błąd aktualizacji"],
+      ["Update stopped. Waiting for connection.", "Pobieranie zapauzowane. Oczekiwanie do połączenie."]
    ],
-   "main_start_button": [["Open", "Otwórz"], ["Updating", "Aktualizowanie"]],
+   "main_start_button": [
+      ["Open", "Otwórz"],
+      ["Updating", "Aktualizowanie"],
+      ["Update failed", "Błąd aktualizacji"],
+      ["No connection.", "Brak połączenia"]
+      ],
    "settings_exit_button": ["Exit", "Wyjście"],
    "settings_menu_theme_button": ["Theme", "Motyw"],
    "settings_menu_sound_button": ["Sound", "Dźwięk"],
@@ -36,7 +46,10 @@
    "settings_update_option_autoupdate_title_label": ["Auto update:", "Automatyczna aktualizacja:"],
    "settings_update_option_autoupdate_button": [["Disabled", "Enabled"], ["Wyłączone","Włączone"]],
    "settings_update_option_check_title_label": ["Check update:", "Sprawdź aktualizacje:"],
-   "settings_update_option_check_button": ["Check", "Sprawdź"],
+   "settings_update_option_check_button": [
+      ["Check", "Sprawdź"],
+      ["Checking...", "Sprawdzam..."]
+   ],
    "settings_update_advanced_subtitle_label": ["Advanced", "Zaawansowane"],
    "settings_update_advanced_capacity_title_label": ["Capacity:", "Przepustowość:"],
    "settings_update_advanced_verification_title_label": ["File verification:", "Weryfikacja plików:"],
@@ -66,13 +79,13 @@
          "Report sended suscesfully",
          "Files are correct"
       ],
-      [  "Nie mozna ustawic okna dzinnika zmian",
-         "Nie udalo sie otworzyc",
+      [  "Nie można ustawić okna dzinnika zmian",
+         "Nie udało sie otworzyć",
          "Otworzono",
-         "Blad polaczenie z internetem",
-         "Ustawienie zostalo zapisane",
-         "Masz aktualna wersje",
-         "Raport wyslany z sukcesem",
+         "Błąd połaczenia z internetem",
+         "Ustawienie zostało zapisane",
+         "Masz aktualną wersje",
+         "Raport wysłany z sukcesem",
          "Pliki są poprawne"
       ]
    ],
@@ -81,12 +94,16 @@
       [  "Something wrong with application, try to check file compatibility or download newest version.",
          "You have old version of aplication \n Downalod update now \n\n Click button below:",
          "Files are not correct",
-         "Files of udapte are inncorrect. \n Try download again."
+         "Files of udapte are inncorrect. \n Try download again.",
+         "No backup folder.",
+         "Automatic restart: \n"
       ],
-      [  "Cos nie tak z aplikacja, sprobuj sprawdzic kontatybilnosc plikow lub pobrac najnowsza wersje aplikacji",
-         "Masz stara wersje apliakcji \n Pobierz aktualizacje teraz \n\n Kliknij w guzik ponizej:",
-         "Pliki są nie poprawne",
-         "Pliki aplikacji sa niepoprawne. \n Spruboj pobrac jeszcze raz."
+      [  "Wystąpił problem z aplikacją. Sprawdź zgodność pliku lub pobierz najnowszą wersję.",
+         "Masz starą wersję aplikacji \n Pobierz aktualizację teraz \n\n Kliknij przycisk poniżej:",
+         "Pliki nie są poprawne",
+         "Pliki aplikacji są niepoprawne. \n Spróbuj pobrać jeszcze raz.",
+         "Brak folderu kopii zapasowej.",
+         "Automatyczny restart za: \n"
       ]
    ],
    "alert_download_button": ["Download", "Pobierz"],

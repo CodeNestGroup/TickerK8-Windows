@@ -44,6 +44,7 @@ def set_Label(self):
     self.settings_update_version_subtitle_label.setAlignment(Qt.AlignCenter)
     self.settings_update_version_desc_title_label.setAlignment(Qt.AlignCenter)
     self.settings_update_version_desc_label.setAlignment(Qt.AlignCenter)
+    self.settings_update_version_desc_label.setWordWrap(True)
     self.settings_update_version_changelog_title_label.setAlignment(Qt.AlignCenter)
     self.settings_update_option_subtitle_label.setAlignment(Qt.AlignCenter)
     self.settings_update_option_autoupdate_title_label.setAlignment(Qt.AlignCenter)
