@@ -47,7 +47,6 @@ class Main_window(QWidget): # Create main window, widget.
         self.screen_size = QGuiApplication.primaryScreen().size() # Get screen size.
         self.main_settings_button_size = QSize(int(self.width() // 6), int(self.height() // 6)) # Set size for button icons.
         self.main_path = str(pathlib.Path(__file__).resolve().parents[3]) # Set main path, path to TickerK8 folder.
-        self.no_connection = False  # For download
 #_______________________________________________________________________________________________________________________
         """ Load json files, configs"""
         self.settings_config_file = json.load(open(self.main_path+'/TickerK8_updater/APP_FILES/CONFIG/_00_settings_config.json', 'r')) # Load settings config file, static.
@@ -65,6 +64,7 @@ class Main_window(QWidget): # Create main window, widget.
         self.main_widget_layout = QGridLayout(self.main_widget) # Main widget grid layout.
 #_______________________________________________________________________________________________________________________
         """ Main changelog """
+        self.main_changelog_error_widget = main_changelog_error_widget(self)
         self.main_changelog_scroll = QScrollArea(self.main_widget) # Main changelog scroll.
         # Widget adding by script
 #_______________________________________________________________________________________________________________________
@@ -223,8 +223,12 @@ class Main_window(QWidget): # Create main window, widget.
         self.controller_alert = controller_alert(self) # Controller of alert.
         self.controller_update = controller_update(self)  # Controller of update.
         self.controller_main = controller_main(self)  # Controller of main.
-        self.controller_connect = controller_connect(self) # Controller of connect.
         set_Connect(self)  # Set connect buttons to functions.
+#_______________________________________________________________________________________________________________________
+        """ Ping """
+        self.ping = controller_ping(self) # Controller ping.
+        self.ping.signal.connect(self.controller_main.main_changelog_controller) # Connect main changelog.
+        self.ping.start() # Start thread.
 ########################################################################################################################
 """ Set font function"""
 def set_font():

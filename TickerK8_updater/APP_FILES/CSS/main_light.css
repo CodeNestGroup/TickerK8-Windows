@@ -5,7 +5,7 @@
     background-color: #D8D2C2;
     border: 0;
 }
-#main_changelog_widget{
+#main_changelog_scroll_widget{
     background-color: #00000000;
     border: 0;
 }
@@ -31,7 +31,21 @@
 .main_changelog_buttons:hover{
     background-color: #B17457;
 }
-
+#main_changelog_error_widget{
+    background-color: #FAF7F0;
+}
+#icon_label{
+    background-color: #00000000;
+}
+#loading_message_label{
+    color: #1e1e1e;
+    background-color: #00000000;
+    border: 0;
+    padding: 0.5em;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
 #main_settings_widget{
     background-color: #FAF7F0;
 }
@@ -169,8 +183,8 @@
     background-color: #FAFAFA;
     border: 0;
     margin: 2em 1em 2em 1em;
-    padding: 0.5em;
-    font-size: 18px;
+    padding: 1em;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.3em;
 }
@@ -187,7 +201,7 @@
 }
 #settings_update_version_desc_label{
     color: #1e1e1e;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.3em;
     text-transform: uppercase;

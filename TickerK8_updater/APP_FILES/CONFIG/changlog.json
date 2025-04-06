@@ -1,5 +1,5 @@
 {
-  "name": "TickerK8 PRE ALPHA 0.0.1.3",
-  "published_at": "2025-04-02T19:00:00Z",
-  "body": "    Changes in script, debug of open application."
+  "name": "TickerK8 PRE ALPHA 0.0.2.1",
+  "published_at": "2025-04-06T00:01:00Z",
+  "body": " Corrected: \n - Opening main application, \n - Opening changelog \n - Added new icons. \n - All debug of downloading."
 }
