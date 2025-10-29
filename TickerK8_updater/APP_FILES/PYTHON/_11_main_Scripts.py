@@ -104,13 +104,14 @@ class controller_main:
                 self.main_setup_changelog_thread.start() # Start Thread
             self.main_self.main_changelog_scroll.setHidden(True) # Hide main changelog scroll.
             self.main_self.main_changelog_error_widget.setHidden(False) # Show main changelog error widget.
+
         except Exception:  # Except if problem with code
             self.main_self.controller_report.write_log(f"{Exception} \n {traceback.format_exc()}")
             self.main_self.alert_text_label.setText(self.main_self.settings_translate_file['alert_text_label'][self.main_self.settings_config_file['__language__']][0])
             self.main_self.controller_alert.open()
 #_______________________________________________________________________________________________________________________
     """ Setup main changelog """
-    def setup_main_changelog(self):
+    def setup_main_changelog(self, date_releses):
         try: # Try setup widget
             self.main_self.main_changelog_scroll_widget = QWidget(self.main_self.main_changelog_scroll) # Create widget for main changelog scroll
             self.main_self.main_changelog_scroll_widget_layout = QVBoxLayout(self.main_self.main_changelog_scroll_widget) # Create layout for widget.
@@ -192,15 +193,7 @@ class controller_main:
     """ Open TcikerK8 App """
     def open_TickerK8(self):
         try:  # Try open app
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            subprocess.Popen(
-                self.main_self.main_path+'/TickerK8.bat',
-                startupinfo=startupinfo,
-                shell=True,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL
-            )
+            subprocess.Popen(['/bin/bash', self.main_self.main_path+'/TickerK8.sh'])  # Open app.
             sys.exit(0)
         except Exception:  # Except if problem with code
             self.main_self.controller_report.write_log(f"{Exception} \n {traceback.format_exc()}")
@@ -522,7 +515,7 @@ class controller_settings:
             self.main_self.controller_alert.open()
 #_______________________________________________________________________________________________________________________
     """ Load svg script """
-    def load_svg(self, svg_path, size):
+    def load_svg(self, svg_path, width, height):
         try: # Try create svg graphics
             renderer = QSvgRenderer(svg_path) # Render svg
             pixmap = QPixmap(width, height) # Create pixmap
@@ -583,7 +576,7 @@ class controller_settings:
             self.settings_check_updates_thread.changelog_fetched.connect(self.check_updates_controller) # Connect func to setup Widget
             self.settings_check_updates_thread.finished.connect(self.setup_thread_clean) # Connect cleanup function
             self.settings_check_updates_thread.start() # Start Thread
-        except Exception:  # Except if problem with code
+        except:
             self.main_self.controller_report.write_log(f"{Exception} \n {traceback.format_exc()}")
             self.main_self.alert_text_label.setText(self.main_self.settings_translate_file['alert_text_label'][self.main_self.settings_config_file['__language__']][0])
             self.main_self.controller_alert.open()
@@ -661,7 +654,7 @@ class controller_update:
             self.start() # start function automatic.
         def run(self):
             try:
-                release = urllib.request.urlopen('https://api.github.com/repos/CodeNestGroup/TickerK8-Windows/releases') # Get latest relaeses from github
+                release = urllib.request.urlopen('https://api.github.com/repos/CodeNestGroup/TickerK8-Linux/releases') # Get latest relaeses from github
                 self.changelog_fetched.emit(json.loads(release.read().decode())) # Emir signal with json list
             except:
                 self.changelog_fetched.emit([])
@@ -897,7 +890,7 @@ class controller_download(QThread):
             self.restart() # Restart application
         except:
             pass
-#_______________________________________________________________________________________________________________________
+#______________________________________________________________________________________________________________________
     """ Backup """
     def backup(self):
         try:

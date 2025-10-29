@@ -1,5 +1,5 @@
 {
-  "name": "TickerK8 PRE ALPHA 0.0.2.1",
-  "published_at": "2025-04-06T00:01:00Z",
-  "body": " Corrected: \n - Opening main application, \n - Opening changelog \n - Added new icons. \n - All debug of downloading."
+  "name": "TickerK8 PRE ALPHA 0.0.3.129",
+  "published_at": "2025-10-29T00:10:00Z",
+  "body": "NEW RELEASE\n\nWe want introduce you new version of application. \nWhat's changed? \n\n1. Login page\n\n    *  New dynamic background\n    *  New design and layout\n    \n2. Register page\n\n    *  Creation a register page\n    *  Creation a register script\n\n3. Main page\n\n    *  New dynamic background\n    *  New design and layout\n    *  Creation user list side\n    *  Creation list control, user can edit what type of data  will be displayed and which list will be showed\n    *  Creation data windows of objects like icon, name, ticker, statistics, chart, info \n    *  Creation news side, window with five hot news from user region\n    *  Creation  news control, user can see list of news from: market, country, world after pressing button\n    *  Creation news window\n    *  Creation search window, user can search object in database and add to his lists\n    *  Creation settings window"
 }

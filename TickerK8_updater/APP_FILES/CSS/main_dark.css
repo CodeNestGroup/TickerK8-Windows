@@ -5,7 +5,7 @@
     background-color: #1e1e1e;
     border: 0;
 }
-#main_changelog__scroll_widget{
+#main_changelog_scroll_widget{
     background-color: #00000000;
     border: 0;
 }
@@ -49,7 +49,6 @@
 #main_settings_widget{
     background-color: #252525;
 }
-
 .main_settings_buttons{
     background-color: #1e1e1e;
     border: 0;

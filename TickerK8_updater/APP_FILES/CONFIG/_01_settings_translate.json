@@ -1,4 +1,4 @@
-{
+{  
    "main_changelog_error_widget": [
       ["No connection.", "Brak połączenia"],
       ["Loading", "Ładowanie"]
@@ -19,7 +19,8 @@
       ["Updating", "Aktualizowanie"],
       ["Update failed", "Błąd aktualizacji"],
       ["No connection.", "Brak połączenia"]
-      ],
+   
+   ],
    "settings_exit_button": ["Exit", "Wyjście"],
    "settings_menu_theme_button": ["Theme", "Motyw"],
    "settings_menu_sound_button": ["Sound", "Dźwięk"],
