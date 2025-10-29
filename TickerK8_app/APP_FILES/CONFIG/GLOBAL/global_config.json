@@ -1,0 +1,87 @@
+{
+    "language": 0,
+    "theme": "vintage_elegance_dark",
+    "sound": {
+        "_button_": false,
+        "_alert_": false,
+        "_notification_": false
+    },
+    "search_filters": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+    ],
+    "object_list_tags": [
+        "name",
+        "icon"
+    ],
+    "object_lists": {
+        "Favourite": [
+            {
+                "Countries": [
+                    {
+                        "country": 1
+                    }
+                ]
+            },
+            {
+                "Markets": [
+                    {
+                        "market": 1
+                    }
+                ]
+            },
+            {
+                "Indexes": [
+                    {
+                        "market_index": 2
+                    },
+                    {
+                        "market_index": 4
+                    }
+                ]
+            },
+            {
+                "Stocks": [
+                    {
+                        "stock": 3
+                    },
+                    {
+                        "stock": 5
+                    },
+                    {
+                        "stock": 4
+                    }
+                ]
+            }
+        ],
+        "Indexes": [
+            {
+                "AGX": [
+                    {
+                        "country": 1
+                    },
+                    {
+                        "market_index": 1
+                    },
+                    {
+                        "market_index": 4
+                    }
+                ]
+            }
+        ]
+    },
+    "object_list": "Favourite",
+    "object": [
+        "stock",
+        3
+    ],
+    "object_chart_type": [
+        0,
+        0
+    ],
+    "mid_object_list": "Indexes"
+}

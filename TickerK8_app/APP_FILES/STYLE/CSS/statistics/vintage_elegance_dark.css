@@ -1,0 +1,102 @@
+#statistics_widget{
+    background-color: #1b1b1b;
+}
+#main_title_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    border: 0;
+    padding: 1em;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#main_scroll{
+    background-color: #00000000;
+    border: 0;
+}
+#main_scroll QScrollBar:vertical{
+    border: none;
+    background: #1e1e1e;
+    width: 8px;
+    margin: 0;
+}
+#main_scroll QScrollBar::handle:vertical {
+    background: #353535;
+    min-height: 15px;
+    border-radius: 2px;
+}
+
+#main_scroll QScrollBar::handle:vertical:hover {
+    background: #031913;
+}
+
+#main_scroll QScrollBar::add-line:vertical, #main_scroll QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}
+
+#main_scroll QScrollBar::add-page:vertical, #main_scroll QScrollBar::sub-page:vertical {
+    background: none;
+}
+.main_e_c_button{
+    color: #FAFAFA;
+    background-color: #252525;
+    border: 0;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    font-size: 14px;
+}
+.main_e_c_button:hover{
+    background-color: #031913;
+}
+#scroll_widget{
+    background-color: #00000000;
+}
+.option_button{
+    color: #FAFAFA;
+    background-color: #252525;
+    border: 0;
+    padding: 0.3em;
+    font-size: 16px;
+}
+.option_button:hover{
+    background-color: #031913;
+}
+.n_r_button{
+    background-color: #252525;
+    border: 0;
+}
+.n_r_button:hover{
+    background-color: #031913;
+}
+.n_r_widget{
+    background-color: #00000000;
+} 
+.n_r_title_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+}
+.n_r_map_label{
+    background-color: #00000000;
+    padding: 0.3em;
+}
+.n_r_statistics_widget{
+    background-color: #1e1e1e;
+}
+.n_r_name_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.n_r_value_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}

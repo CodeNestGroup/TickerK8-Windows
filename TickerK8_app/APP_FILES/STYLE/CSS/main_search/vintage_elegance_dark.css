@@ -1,0 +1,159 @@
+#main_search_widget{
+    background-color: #60000000;
+}
+#panel_widget{
+    background-color: #00000000;
+}
+#panel_search_widget{
+    background-color: #1a1a1a;
+}
+.panel_scroll_class{
+    background-color: #00000000;
+}
+.panel_scroll_class QScrollBar:vertical{
+    border: none;
+    background: #1e1e1e;
+    width: 8px;
+    margin: 0;
+}
+.panel_scroll_class QScrollBar::handle:vertical{
+    background: #1e1e1e;
+    min-height: 15px;
+    border-radius: 2px;
+}
+.panel_scroll_class QScrollBar::handle:vertical:hoverr{
+    background: #282828;
+}
+.panel_scroll_class QScrollBar::add-line:vertical, .panel_scroll_class QScrollBar::sub-line:vertical{
+    border: none;
+    background: none;
+}
+.panel_scroll_class QScrollBar::add-page:vertical, .panel_scroll_class QScrollBar::sub-page:vertical{
+    background: none;
+}
+.panel_scroll_widget_class{
+    background-color: #00000000;
+}
+#index_button{
+    color: #c3c3c3;
+    background-color: #00000000;
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#index_button:hover{
+    background-color: #097f36;
+}
+#object_logo_label{
+    background-color: #00000000;
+    margin-bottom: 0.5em;
+}
+#object_name_button{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    margin-bottom: 0.5em;
+    border: 0;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    font-size: 15px;
+}
+#object_name_button:hover{
+    background-color: #282828;
+}
+#market_logo_label{
+    background-color: #00000000;
+    margin-bottom: 0.5em;
+}
+#market_name_label{
+    color: #c3c3c3;
+    margin-bottom: 0.5em;
+    border: 0;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    font-size: 15px;
+}
+#panel_search_lineedit{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.panel_type_buttons{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    font-size: 14px;
+}
+.panel_tags{
+    color: #c3c3c3;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 300;
+}
+.panel_exit_button_class{
+    color: #c3c3c3;
+    background-color: #252525;
+    border: 0;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    font-size: 16px;
+}
+.panel_exit_button_class:hover{
+    background-color: #282828;
+}
+#panel_add_widget{
+    background-color: #1a1a1a;
+}
+#panel_add_title_label{
+    color: #c3c3c3;
+    padding: 0.3em;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#panel_add_path_label{
+    color: #c3c3c3;
+    padding: 0.3em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.panel_add_button{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    padding: 0.4em;
+}
+.panel_add_button:hover{
+    background-color: #282828;
+}
+.panel_add_object_label{
+    color: #c3c3c3;
+    padding: 0.5em;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.panel_add_object_button{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    padding: 0.4em;
+}
+.panel_add_object_button:hover{
+    background-color: #282828;
+}

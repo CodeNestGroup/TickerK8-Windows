@@ -1,0 +1,27 @@
+{
+    "register_title_label": ["Register", "Rejestracja"],
+    "register_name_subtitle_label": ["Name", "Nazwa"],
+    "register_name_lineedit": ["Name", "Nazwa"],
+    "register_name_label": [["Type name", "Wpisz nazwe"], ["Name is already taken", "Nazwa jest juz zajeta"]],
+    "register_emial_subtitle_label": ["E-mail", "E-mail"],
+    "register_emial_lineedit": ["E-mail", "E-mail"],
+    "register_emial_confirm_lineedit": ["Confirm e-mail", "Potwierdź e-mail"],
+    "register_email_label": [["Type email", "Wpisz email"], ["Email is already taken", "Email jest juz zajety"], ["Confirm line error", " Blad potwierdzenia"]],
+    "register_phonenumber_subtitle_label": ["Phone number", "Numer telefonu"],
+    "register_phonenumber_lineedit": ["Phone", "Telefon"],
+    "register_phonenumber_lineedit_error": ["Intigers", "Cyfry"],
+    "register_country_subtitle_label": ["Country", "Kraj"],
+    "register_password_subtitle_label": ["Password", "Hasło"],
+    "register_password_lineedit": ["Password", "Hasło"],
+    "register_password_lineedit_error": [["Confirm line error", "Blad potwierdzenia"], ["Password requirments error", "Blad wymagan hasla"]],
+    "register_password_requirements_label": [
+        ["Minimum 8 signs, use phrases,\nspecial characters and numbers", "Minimum 8 znaków, używaj fraz,\n znaki specjalne i cyfry"], 
+        ["Confirm line error", "Blad potwierdzenia"],
+        ["Password requirments error", "Blad wymagan hasla"]
+    ],
+    "register_password_show_button": [["Hide", "Show"], ["Schowaj", "Pokarz"]],
+    "register_password_confirm_lineedit": ["Confirm password", "Potwierdź hasło"],
+    "register_password_confirm_show_button": [["Hide", "Show"], ["Schowaj", "Pokarz"]],
+    "register_register_button": [["Register", "Zarejestruj się"], ["Success", "Sukces"]],
+    "register_exit_button": ["Exit", "Wyjdź"]
+}
