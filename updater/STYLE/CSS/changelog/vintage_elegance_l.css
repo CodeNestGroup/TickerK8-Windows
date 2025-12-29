@@ -1,0 +1,75 @@
+#changelog_widget{
+    background-color: #c3c3c3;
+    border: 0;
+}
+#title_label{
+    color: #1a1a1a;
+    background-color: #00000000;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#scroll{
+    background-color: #d4d4d4;
+    border: 0;
+}
+#scroll QScrollBar:vertical{
+    border: none;
+    background: #1a1a1a;
+    width: 8px;
+    margin: 0;
+}
+#scroll QScrollBar::handle:vertical {
+    background: #353535;
+    min-height: 15px;
+    border-radius: 2px;
+}
+
+#scroll QScrollBar::handle:vertical:hover {
+    background: #282828;
+}
+
+#scroll QScrollBar::add-line:vertical, #scroll QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}
+
+#scroll QScrollBar::add-page:vertical, #scroll QScrollBar::sub-page:vertical {
+    background: none;
+}
+#update_widget{
+    background-color: #00000000;
+}
+#update_title_label{
+    color: #1a1a1a;
+    background-color: #00000000;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#update_date_label{
+    color: #1a1a1a;
+    background-color: #00000000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#update_text_label{
+    color: #1a1a1a;
+    background-color: #00000000;
+    padding: 0.5em;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#exit_button{
+    color: #c3c3c3;
+    background-color: #252525;
+    border: 0;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+#exit_button:hover{
+    background-color: #282828;
+}

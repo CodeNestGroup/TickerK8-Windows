@@ -1,0 +1,7 @@
+{
+    "menu_theme_button": ["Theme", "Motyw"],
+    "menu_sound_button": ["Sound", "Dźwięk"],
+    "menu_update_button": ["Update", "Aktualizacja"],
+    "menu_language_button": ["Language", "Język"],
+    "menu_report_button": ["Report", "Raport"]
+}

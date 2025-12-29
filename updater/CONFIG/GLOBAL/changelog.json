@@ -1,0 +1,5 @@
+{
+  "name": "TickerK8 PRE ALPHA 0.0.4.0",
+  "published_at": "2025-12-28T23:00:00Z",
+  "body": "New Update Overview\n\nThis update introduces significant improvements in performance, structure, and usability.\n\nChanges and Improvements:\n\nThe installation script has been fixed, simplified, and made more reliable.\n\nThe application’s visual design has been updated.\n\nThe update-related application code has been fully refactored, including a change in the object creation approach.\n\nThe previous file-based structure (__00__main.py, __01__setobjectname, etc.) has been replaced with a clearer and more maintainable architecture: structure, ui, and logic.\n\nObjects are now created only when needed instead of all at once, resulting in improved performance.\n\nFile size has been reduced from 480 KiB to 244 KiB.\n\nRAM usage has been reduced from 330 MB to 280 MB.\n\nThis update improves maintainability, efficiency, and overall application performance."
+}

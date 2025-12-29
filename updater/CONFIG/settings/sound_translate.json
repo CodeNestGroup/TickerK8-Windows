@@ -1,0 +1,5 @@
+{
+    "title_label": ["Sound", "Dźwięk"],
+    "button_label": ["Button", "Guzik"],
+    "button_button": [["Disabled", "Enabled"], ["Wyłączone","Włączone"]]
+}

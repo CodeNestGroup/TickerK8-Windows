@@ -43,14 +43,14 @@ echo Installing requirements...
     pause
     exit /b 1
 )
-%PIP_EXEC% install -r "%PROJECT_DIR%\TickerK8_updater\APP_FILES\CONFIG\requirements.txt" || (
+%PIP_EXEC% install -r "%PROJECT_DIR%\updater\CONFIG\requirements.txt" || (
     echo [ERROR] Install requirements error!
     pause
     exit /b 1
 )
 
 :: Check if file _00_main.py exists
-if not exist "%PROJECT_DIR%\TickerK8_updater\APP_FILES\PYTHON\_00_main.py" (
+if not exist "%PROJECT_DIR%\updater\PYTHON\__core__.py" (
     echo [ERROR] File _00_main.py not exists!
     pause
     exit /b 1
@@ -58,7 +58,7 @@ if not exist "%PROJECT_DIR%\TickerK8_updater\APP_FILES\PYTHON\_00_main.py" (
 
 :: Starting application
 echo Starting application...
-%PYTHON_EXEC% "%PROJECT_DIR%\TickerK8_updater\APP_FILES\PYTHON\_00_main.py" || (
+%PYTHON_EXEC% "%PROJECT_DIR%\updater\APP_FILES\PYTHON\__core__.py" || (
     echo [ERROR] Error with starting application!
     pause
     exit /b 1
