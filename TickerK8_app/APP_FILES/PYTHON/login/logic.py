@@ -1,7 +1,8 @@
 """ Import packages """
 import json
 import datetime
-import mysql.connector 
+import sys
+import os
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
     QWidget
@@ -93,32 +94,6 @@ def change_text_icon(self, title='', sub='', icon=''):
     render.render(icon_painter)
     icon_painter.end()
     self.login_welcome_icon_label.setPixmap(QPixmap(icon_pixmap))
-#______________________________________________________________________________________________________________________
-""" Sign in controller """
-def sign_in_controller(self):
-    _login = self.login_login_lineedit.text()
-    _password = self.login_password_lineedit.text()
-    connect = mysql.connector.connect(
-        host = "localhost",
-        user = "client",
-        password = "Qwerty123456#",
-        database = "TickerK8"
-    )
-    cursor = connect.cursor()
-    cursor.execute('SELECT id FROM users WHERE name=%s and password=%s;', (_login, _password))
-    login_password_result = cursor.fetchone()
-    cursor.close()
-    connect.close()
-    """ Checking correct sign in data"""
-    if login_password_result:
-        self.correct_login.emit()
-    else:
-        """ Reset """
-        self.login_login_lineedit.clear()
-        self.login_password_lineedit.clear()
-        """ Style """
-        self.login_login_lineedit.setStyleSheet('border: 2px solid red;')
-        self.login_password_lineedit.setStyleSheet('border: 2px solid red;')
 #______________________________________________________________________________________________________________________
 """ reset style """
 def reset_style(self):

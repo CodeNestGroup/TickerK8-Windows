@@ -20,7 +20,6 @@ from soundbutton.structure import QPushButton_sound
 #______________________________________________________________________________________________________________________
 
 class Settings_widget(QWidget):
-    report_created = pyqtSignal()
     update_created = pyqtSignal()
     def __init__(self, parent):
         super().__init__()
@@ -37,7 +36,6 @@ class Settings_widget(QWidget):
         self.menu_sound_button = QPushButton_sound(self.menu_scroll_widget)
         self.menu_update_button = QPushButton_sound(self.menu_scroll_widget)
         self.menu_language_button = QPushButton_sound(self.menu_scroll_widget)
-        self.menu_report_button = QPushButton_sound(self.menu_scroll_widget)
         self.exit_button = QPushButton_sound(self.menu_scroll)
         self.sub_menu_scroll = None
         """ Call functions """
@@ -50,7 +48,6 @@ class Settings_widget(QWidget):
         self.menu_sound_button.clicked.connect(lambda: self.sub_menu_open(self.sound_widget_open))
         self.menu_update_button.clicked.connect(lambda: self.sub_menu_open(self.update_widget_open))
         self.menu_language_button.clicked.connect(lambda: self.sub_menu_open(self.language_widget_open))
-        self.menu_report_button.clicked.connect(lambda: self.sub_menu_open(self.report_widget_open))
 
     def sub_menu_open(self, open_func):
         if self.sub_menu_scroll:
@@ -122,13 +119,4 @@ class Settings_widget(QWidget):
         language_retranslate(self)
         """ Connect functions """
         self.type_combobox.currentIndexChanged.connect(lambda: change_language(self))
-    
-    def report_widget_open(self):
-        self.sendreport_label = QLabel(self.sub_menu_widget)
-        self.sendreport_button = QPushButton_sound(self.sub_menu_widget)
-        """ Call functions """
-        report_ui(self)
-        report_retranslate(self)
-        """ Connect functions """
-        self.report_created.emit()
 #______________________________________________________________________________________________________________________

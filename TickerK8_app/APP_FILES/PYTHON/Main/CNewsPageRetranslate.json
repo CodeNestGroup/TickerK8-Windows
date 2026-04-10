@@ -1,0 +1,6 @@
+{
+    "NewsStockB": ["Stocks", "Akcje"],
+    "NewsMarketB": ["Markets", "Giełdy"],
+    "NewsCountryB": ["Countries", "Kraje"],
+    "NewsWorldB": ["World", "Świat"]
+}

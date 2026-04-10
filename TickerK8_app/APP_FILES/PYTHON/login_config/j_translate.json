@@ -1,0 +1,25 @@
+{
+    "title_label": ["User config", "Konfiguracja użytkownika"],
+    "info_label": [
+        [
+            "Setup application settings like:\n- Language,\n- Theme",
+            "",
+            "Set subscription plan",
+            "",
+            "Accept regulations and save config",
+            ""
+        ],
+        [
+            "Ustawienie ustawień aplikacji takich jak:\n-Język,\n- Motyw",
+            "",
+            "Ustaw plan subskrypcji",
+            "",
+            "Zaakcpetuj regulamin i zapisz ustawienia",
+            ""
+        ]
+    ],
+    "left_button": ["L", "L"],
+    "exit_button": ["E", "E"],
+    "right_button": ["R", "R"],
+    "accept_button": ["A", "A"]
+}

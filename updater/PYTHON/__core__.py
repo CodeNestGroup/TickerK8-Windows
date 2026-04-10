@@ -22,7 +22,6 @@ from PyQt5.QtGui import (
 from main.structure import Main_widget
 from settings.structure import Settings_widget
 from changelog.structure import Changelog_widget
-from report.structure import Report_widget
 #______________________________________________________________________________________________________________________
 
 class app_controller(QWidget):
@@ -36,7 +35,6 @@ class app_controller(QWidget):
         self.main_widget = None
         self.settings_widget = None
         self.changelog_widget = None
-        self.report_widget = None 
         self.screen = QApplication.primaryScreen()
         self.geometry = self.screen.availableGeometry()
         pos_x = self.geometry.width()//4
@@ -60,7 +58,6 @@ class app_controller(QWidget):
         self.settings_widget = Settings_widget(self)
         self.layout.addWidget(self.settings_widget)
         self.settings_widget.exit_button.clicked.connect(self.settings_to_main)
-        self.settings_widget.report_created.connect(lambda: self.settings_widget.sendreport_button.clicked.connect(self.settings_to_report))
         self.settings_widget.update_created.connect(lambda: self.settings_widget.version_changelog_button.clicked.connect(lambda: self.settings_to_changelog('', 's')))
     
     def changelog_setup(self, data, f):
@@ -70,11 +67,6 @@ class app_controller(QWidget):
             self.changelog_widget.exit_button.clicked.connect(self.changelog_to_main)
         elif f == 's':
             self.changelog_widget.exit_button.clicked.connect(self.changelog_to_settings)
-
-    def report_setup(self):
-        self.report_widget = Report_widget(self)
-        self.layout.addWidget(self.report_widget)
-        self.report_widget.exit_button.clicked.connect(self.report_to_settings)
 #______________________________________________________________________________________________________________________
 
     def main_to_settings(self):
@@ -105,16 +97,6 @@ class app_controller(QWidget):
     def changelog_to_settings(self):
         self.changelog_widget.deleteLater()
         self.changelog_widget = None
-        self.settings_setup()
-    
-    def settings_to_report(self):
-        self.settings_widget.deleteLater()
-        self.settings_widget = None
-        self.report_setup()
-
-    def report_to_settings(self):
-        self.report_widget.deleteLater()
-        self.report_widget = None
         self.settings_setup()
 #______________________________________________________________________________________________________________________
     

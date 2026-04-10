@@ -11,7 +11,8 @@ from PyQt5.QtWidgets import (
     QGridLayout
         )
 from PyQt5.QtCore import (
-        Qt
+        Qt,
+        pyqtSignal
         )
 """ Import register modules """
 from .ui import *
@@ -19,6 +20,7 @@ from .logic import *
 #______________________________________________________________________________________________________________________
 
 class Register_widget(QWidget):
+    correct_data = pyqtSignal(tuple)
     def __init__(self, parent):
         super().__init__()
         self.setAttribute(Qt.WA_StyledBackground, True)
@@ -51,6 +53,9 @@ class Register_widget(QWidget):
         register_reload_style(self)
         register_retranslate(self)
         """ Connect local functions """
+        self.user_exists = lambda: user_exists(self)
+        self.email_exists = lambda: email_exists(self)
+        self.phone_exists = lambda: phone_exists(self)
         self.register_name_lineedit.textChanged.connect(lambda: reset_name(self))
         self.register_emial_lineedit.textChanged.connect(lambda: reset_email(self))
         self.register_emial_confirm_lineedit.textChanged.connect(lambda: reset_confirm_email(self))

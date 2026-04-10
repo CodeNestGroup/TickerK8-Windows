@@ -113,20 +113,6 @@ def register_ui(self):
     self.register_password_confirm_lineedit.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     self.register_register_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     self.register_exit_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-    """ Combo box add item """
-    self.register_phonenumber_combobox.addItems(
-        [
-            "+93",
-            "+48"
-
-        ]
-    )
-    self.register_country_combobox.addItems(
-        [
-            "Afganistan",
-            "Polska"
-        ]
-    )
 #______________________________________________________________________________________________________________________
 
 def register_reload_style(self):
@@ -143,7 +129,7 @@ def register_retranslate(self):
     self.register_emial_lineedit.setPlaceholderText(_t['register_emial_lineedit'][_l])
     self.register_emial_confirm_lineedit.setPlaceholderText(_t['register_emial_confirm_lineedit'][_l])
     self.register_phonenumber_subtitle_label.setText(_t['register_phonenumber_subtitle_label'][_l])
-    self.register_phonenumber_lineedit.setPlaceholderText(_t['register_phonenumber_lineedit'][_l])
+    self.register_phonenumber_lineedit.setPlaceholderText(_t['register_phonenumber_lineedit'][0][_l])
     self.register_country_subtitle_label.setText(_t['register_country_subtitle_label'][_l])
     self.register_password_subtitle_label.setText(_t['register_password_subtitle_label'][_l])
     self.register_password_requirements_label.setText(_t['register_password_requirements_label'][0][_l])

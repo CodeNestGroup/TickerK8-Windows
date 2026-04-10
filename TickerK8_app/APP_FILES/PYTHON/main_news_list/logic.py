@@ -1,5 +1,4 @@
 """ Import packages """
-import mysql
 import json
 """ Import PyQt5 Widgets """
 from PyQt5.QtWidgets import (
@@ -30,17 +29,7 @@ def news_list_widget(self):
     else:
         news_type_name = 'world'
     """ Get data """
-    connect = mysql.connector.connect(
-        host = "localhost",
-        user = "client",
-        password = "Qwerty123456#",
-        database = "TickerK8"
-    )
-    cursor = connect.cursor()
-    cursor.execute(f'SELECT id, title, date  FROM News WHERE {news_type_name}={user_setting};')
-    result = cursor.fetchall()
-    cursor.close()
-    connect.close()
+    result = []
     """ Create objects """
     self.news_list_widget = QWidget(self.news_list_scroll)
     self.news_list_layout = QVBoxLayout(self.news_list_widget)

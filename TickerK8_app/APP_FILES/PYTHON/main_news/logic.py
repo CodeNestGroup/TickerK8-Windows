@@ -1,5 +1,4 @@
 """ Import pacakges """
-import mysql
 import json
 import requests
 from io import BytesIO
@@ -23,19 +22,7 @@ from PyQt5.QtGui import (
 )
 #______________________________________________________________________________________________________________________
 
-def news_widget(self, id_id):
-    connect = mysql.connector.connect(
-    host="localhost",
-    user="client",
-    password="Qwerty123456#",
-    database="TickerK8"
-    )
-    cursor = connect.cursor()
-    cursor.execute(f"SELECT json_file FROM News WHERE id={id_id};")
-    result = cursor.fetchone()[0]
-    json_file = json.loads(result)
-    cursor.close()
-    connect.close()
+def news_widget(self, data):
     """ Create objects """
     self.news_widget = QWidget(self.news_scroll)
     self.news_layout = QVBoxLayout(self.news_widget)
@@ -120,25 +107,25 @@ def news_widget(self, id_id):
     """ Set text """
     _t = json.load(open(self.main_path+'/CONFIG/main_news/translate.json', 'r'))
     _l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
-    self.news_title_label.setText(json_file['title'])
-    self.news_date_label.setText(json_file['date'])
+    self.news_title_label.setText(data[0])
+    self.news_date_label.setText('')
     self.news_source_title_label.setText(_t['news_source_title_label'][_l])
     self.news_hash_title_label.setText(_t['news_hash_title_label'][_l])
     """ Set photo """
-    photo = requests.get(json_file['photo']['original'])
-    photo.raise_for_status()
-    pix = QPixmap()
-    pix.loadFromData(BytesIO(photo.content).read())
-    zoomed_pix = pix.scaled(self.news_photo_label.width(), int(self.panel_widget.height()*0.5), Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation)
-    cropped_pix = zoomed_pix.copy(
-        (zoomed_pix.width() - self.news_photo_label.width()) // 2,
-        (zoomed_pix.height() - int(self.panel_widget.height()*0.5)),
-        self.news_photo_label.width(),
-        self.news_photo_label.height()
-    )
-    self.news_photo_label.setPixmap(cropped_pix)
+    #photo = requests.get(json_file['photo']['original'])
+    #photo.raise_for_status()
+    ##pix = QPixmap()
+    #pix.loadFromData(BytesIO(photo.content).read())
+    #zoomed_pix = pix.scaled(self.news_photo_label.width(), int(self.panel_widget.height()*0.5), Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation)
+    #cropped_pix = zoomed_pix.copy(
+    #    (zoomed_pix.width() - self.news_photo_label.width()) // 2,
+    #    (zoomed_pix.height() - int(self.panel_widget.height()*0.5)),
+    #    self.news_photo_label.width(),
+    #    self.news_photo_label.height()
+    #)
+    #self.news_photo_label.setPixmap(cropped_pix)
     """ Make content """
-    for index, rows in enumerate(json_file['content'], start=0):
+    for index, rows in enumerate(json.loads(data[2]), start=0):
         label = QLabel(self.news_content_widget)
         label.setObjectName(f'news_content_label_{index}')
         label.setText(rows[3])
@@ -163,18 +150,4 @@ def news_widget(self, id_id):
             label.setObjectName(f"Heading_4_Text_{index}")
             label.setAlignment(Qt.AlignLeft)
         self.news_content_layout.addWidget(label, index, 2, 1, 96)
-    """ Make source """
-    for index, rows in enumerate(json_file['source'], start=1):
-        button = QPushButton(self.news_source_widget)
-        button.setObjectName(f'news_source_button_{index}')
-        button.setProperty('class', 'source_button')
-        button.setText(str(rows))
-        self.news_source_layout.addWidget(button, index, 2, 1, 25)
-    """ Make hash """
-    for index, rows in enumerate(json_file['hash'], start=1):
-        button = QPushButton(self.news_hash_widget)
-        button.setObjectName(f'news_hash_button_{index}')
-        button.setProperty('class', 'hash_button')
-        button.setText(str(rows))
-        self.news_hash_layout.addWidget(button, index, 2, 1, 25)
 #______________________________________________________________________________________________________________________

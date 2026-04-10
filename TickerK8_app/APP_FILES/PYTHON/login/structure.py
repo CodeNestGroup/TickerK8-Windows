@@ -11,8 +11,7 @@ from PyQt5.QtWidgets import (
         )
 from PyQt5.QtCore import (
         Qt,
-        QTimer,
-        pyqtSignal
+        QTimer
         )
 """ Import login modules """
 from .ui import *
@@ -20,7 +19,6 @@ from .logic import *
 #______________________________________________________________________________________________________________________
 
 class Login_widget(QWidget):
-    correct_login = pyqtSignal()
     def __init__(self, parent):
         super().__init__()
         self.setAttribute(Qt.WA_StyledBackground, True)
@@ -50,7 +48,6 @@ class Login_widget(QWidget):
         self.timer.timeout.connect(self.login_widget_background)
         self.timer.start(1)
         """ Connect functions """
-        self.login_login_button.clicked.connect(lambda: sign_in_controller(self))
         self.login_login_lineedit.textChanged.connect(lambda: reset_style(self))
         self.login_password_lineedit.textChanged.connect(lambda: reset_style(self))
 #______________________________________________________________________________________________________________________

@@ -1,0 +1,8 @@
+{
+    "PanelTitleL": ["User", "Użytkownik"],
+    "UserNameNameL": ["Name", "Nazwa"],
+    "UserEmailNameL": ["Email", "Email"],
+    "UserPhoneNameL": ["Phone number", "Numer telefonu"],
+    "UserCountryNameL": ["Country", "Kraj"],
+    "UserCreateDateNameL": ["Create date", "Data utworzenia"]
+}

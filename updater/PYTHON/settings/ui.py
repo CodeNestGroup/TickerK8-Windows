@@ -27,14 +27,12 @@ def settings_ui(self):
     self.menu_sound_button.setObjectName('menu_sound_button')
     self.menu_update_button.setObjectName('menu_update_button')
     self.menu_language_button.setObjectName('menu_language_button')
-    self.menu_report_button.setObjectName('menu_report_button')
     self.exit_button.setObjectName('exit_button')
     """ Set property """
     self.menu_theme_button.setProperty('class', 'menu_buttons')
     self.menu_sound_button.setProperty('class', 'menu_buttons')
     self.menu_update_button.setProperty('class', 'menu_buttons')
     self.menu_language_button.setProperty('class', 'menu_buttons')
-    self.menu_report_button.setProperty('class', 'menu_buttons')
     """ Set layout """
     self.layout.addWidget(self.menu_scroll, 0, 0, 90, 30)
     self.layout.addWidget(self.exit_button, 90, 0, 10, 30)
@@ -48,7 +46,6 @@ def settings_ui(self):
     self.menu_scroll_layout.addWidget(self.menu_sound_button)
     self.menu_scroll_layout.addWidget(self.menu_update_button)
     self.menu_scroll_layout.addWidget(self.menu_language_button)
-    self.menu_scroll_layout.addWidget(self.menu_report_button)
     self.menu_scroll_layout.setSpacing(0)
     self.menu_scroll_layout.setContentsMargins(0,0,0,0)
     self.menu_scroll_widget.setLayout(self.menu_scroll_layout)
@@ -66,7 +63,6 @@ def settings_ui(self):
     self.menu_sound_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     self.menu_update_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     self.menu_language_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-    self.menu_report_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     self.exit_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def settings_reload_style(self):
@@ -82,7 +78,6 @@ def settings_retranslate(self):
     self.menu_sound_button.setText(t['menu_sound_button'][l])
     self.menu_update_button.setText(t['menu_update_button'][l])
     self.menu_language_button.setText(t['menu_language_button'][l])
-    self.menu_report_button.setText(t['menu_report_button'][l])
 #______________________________________________________________________________________________________________________
 
 def sub_menu_ui(self):
@@ -272,35 +267,6 @@ def language_retranslate(self):
     self.title_label.setText(t['title_label'][l])
     self.type_label.setText(t['type_label'][l])
     self.type_combobox.setCurrentIndex(l)
-#______________________________________________________________________________________________________________________
-
-def report_ui(self):
-    """ Set object name """
-    self.sendreport_label.setObjectName('sendreport_label')
-    self.sendreport_button.setObjectName('sendreport_button')
-    """ Set property """
-    self.sendreport_label.setProperty('class', 'name_label')
-    self.sendreport_button.setProperty('class', 'value_button')
-    """ Set layout """
-    self.sub_menu_layout.addWidget(self.sendreport_label, 45, 0, 5, 50)
-    self.sub_menu_layout.addWidget(self.sendreport_button, 45, 50, 5, 50)
-    """ Set widget """
-    """ Set label """
-    self.sendreport_label.setAlignment(Qt.AlignCenter)
-    """ Set button """
-    self.sendreport_button.setDisabled(True)
-    """ Set size """
-    self.sendreport_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-    self.sendreport_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-
-def report_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/settings/report_translate.json', 'r'))
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
-    l = g['language']
-    self.title_label.setText(t['title_label'][l])
-    self.sendreport_label.setText(t['sendreport_label'][l])
-    self.sendreport_button.setText(t['sendreport_button'][l])
-#______________________________________________________________________________________________________________________
 
 def load_svg(svg_path, width, height):
     renderer = QSvgRenderer(svg_path) 

@@ -1,0 +1,48 @@
+#NewsReadS{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 12px;
+}
+#ReadW{
+    border: 0;
+}
+#PhotoL{
+    border: 0;
+}
+#TitleL{
+    border: 0;
+    padding: 1em;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}   
+#ItemNameL{
+    border: 0;
+    padding: 1em;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#DataL{
+    border: 0;
+    padding: 1em;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.SubW{
+    border: 0;
+}
+.SubTitleL{
+    border: 0;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}   
+#AuthorL{
+    border: 0;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    font-size: 12px;
+}

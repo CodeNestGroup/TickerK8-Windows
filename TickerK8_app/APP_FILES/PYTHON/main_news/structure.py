@@ -20,12 +20,11 @@ from .logic import *
 #______________________________________________________________________________________________________________________
 
 class Main_news_widget(QWidget):
-    def __init__(self, parent, id_news):
+    def __init__(self, parent, data):
         super().__init__()
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         self.parent = parent
-        self.id_news = id_news
         """ Set paths, file name"""
         self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
         """ Create objects """
@@ -38,7 +37,7 @@ class Main_news_widget(QWidget):
         main_news_ui(self)
         main_news_reload_style(self)
         main_news_retranslate(self)
-        news_widget(self, self.id_news)
+        news_widget(self, data)
         """ Connect functions """
         self.panel_exit_button.clicked.connect(lambda: self.deleteLater())
 #______________________________________________________________________________________________________________________

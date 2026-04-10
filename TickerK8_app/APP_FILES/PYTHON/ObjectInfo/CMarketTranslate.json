@@ -1,0 +1,20 @@
+{
+    "InfoTitleL": ["Info", "Informacje"],
+    "FoundedYearNameL": ["Founded year", "Rok założenia"],
+    "CityNameL": ["City", "Miasto"],
+    "TimezoneNameL": ["Timezone", "Strefa czasowa"],
+    "CurrencyNameL": ["Currency", "Waluta"],
+    "WebsiteNameL": ["Website", "Strona internetowa"],
+    "MarketTypesNameL": ["Market types", "Typy rynków"],
+    "TradingSessionTitleL": ["Trading session", "Sesja handlowa"],
+    "PreMarketNameL": ["Pre market", "Przed sesją"],
+    "OpenNameL": ["Open", "Otwarcie"],
+    "CloseNameL": ["Close", "Zamknięcie"],
+    "CalendarTitleL": ["Calendar", "Kalendarz"],
+    "FreeDaysNameL": ["Free days", "Dni wolne"],
+    "ExchangeStructureTitleL": ["Exchange structure", "Struktura giełdy"],
+    "InstrumentTypesNameL": ["Instrument types", "Typy instrumentów"],
+    "MarketSegmentsNameL": ["Market segments", "Segmenty rynku"],
+    "RegulatorsNameL": ["Regulators", "Regulatorzy"],
+    "TradingSystemsNameL": ["Trading systems", "Systemy transakcyjne"]
+}
