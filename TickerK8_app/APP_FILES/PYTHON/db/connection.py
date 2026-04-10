@@ -31,7 +31,7 @@ class database():
 # --- Online database ---
     def ConnectData(self) -> dict:
         try:
-            conf = json.load(open(f'{self.main_path}/PYTHON/db/conf.json', 'r'))
+            conf = json.load(open(f'{self.main_path}/PYTHON/db/conf.json', 'r', encoding='utf-8'))
             payload = {
                 "token":conf['token'],
                 "name":'u_app'
@@ -147,8 +147,8 @@ class database():
                 conn = None
 
     def LoginConfiguration(self, i:str):
-        c = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r'))
-        t = json.load(open(self.main_path+'/PYTHON/login_config/j_list_translate.json', 'r'))
+        c = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r', encoding='utf-8'))
+        t = json.load(open(self.main_path+'/PYTHON/login_config/j_list_translate.json', 'r', encoding='utf-8'))
         l = c['language'] 
         n = t[l]
 

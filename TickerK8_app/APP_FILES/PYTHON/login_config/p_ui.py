@@ -62,8 +62,8 @@ def reload_style(self):
     # Dodać ikony
 
 def retranslate(self):
-    t = json.load(open(self.main_path+'/PYTHON/login_config/j_translate.json', 'r'))
-    l = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/PYTHON/login_config/j_translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r', encoding='utf-8'))['language']
     self.title_label.setText(t['title_label'][l])
     self.info_label.setText(t['info_label'][l][0])
     self.left_button.setText(t['left_button'][l])
@@ -102,8 +102,8 @@ def app_conf_ui(self):
     self.theme_combobox.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     
 def app_conf_retranslate(self):
-    t = json.load(open(self.main_path+'/PYTHON/login_config/j_app_conf_translate.json', 'r'))
-    l = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/PYTHON/login_config/j_app_conf_translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r', encoding='utf-8'))['language']
     self.language_subtitle_label.setText(t['language_subtitle_label'][l])
     self.language_combobox.addItems(t['language_combobox'])
     self.language_combobox.setCurrentIndex(l)
@@ -133,8 +133,8 @@ def sub_conf_reload_style(self):
 
 
 def sub_conf_retranslate(self):
-    t = json.load(open(self.main_path+'/PYTHON/login_config/j_sub_translate.json', 'r'))
-    l = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/PYTHON/login_config/j_sub_translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r', encoding='utf-8'))['language']
     self.left_button.setText(t['left_button'][l])
     self.center_button.setText(t['center_button'][l])
     self.right_button.setText(t['right_button'][l])
@@ -161,6 +161,6 @@ def accept_settings_reload_style(self):
     pass
 
 def accept_settings_retranslate(self):
-    t = json.load(open(self.main_path+'/PYTHON/login_config/j_accept_settings_translate.json', 'r'))
-    l = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/PYTHON/login_config/j_accept_settings_translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r', encoding='utf-8'))['language']
     self.regulations_label.setText(t['regulations_label'][l])

@@ -23,7 +23,7 @@ class Changelog_widget(QWidget):
         """" Set paths, file name """
         self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
         if data == '':
-            data = json.load(open(self.main_path+'/CONFIG/GLOBAL/changelog.json', 'r'))
+            data = json.load(open(self.main_path+'/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))
         self.changelog_data = data
         """ Create objects """
         self.layout = QGridLayout(self)

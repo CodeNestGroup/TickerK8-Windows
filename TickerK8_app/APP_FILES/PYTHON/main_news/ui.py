@@ -52,12 +52,12 @@ def main_news_ui(self):
 #______________________________________________________________________________________________________________________
 
 def main_news_reload_style(self):
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/main_news/'+_global_config['theme']+'.css')).read())
 #______________________________________________________________________________________________________________________
 
 def main_news_retranslate(self):
-    _t = json.load(open(self.main_path+'/CONFIG/main_news/translate.json', 'r'))
-    _l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    _t = json.load(open(self.main_path+'/CONFIG/main_news/translate.json', 'r', encoding='utf-8'))
+    _l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.panel_exit_button.setText(_t['panel_exit_button'][_l])
 #______________________________________________________________________________________________________________________

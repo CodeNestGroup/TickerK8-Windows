@@ -33,9 +33,9 @@ class Chart_widget(QWidget):
 #______________________________________________________________________________________________________________________
         """ Set paths, file name"""
         self.main_path = str(pathlib.Path(__file__).resolve().parents[2]) # Set main path, path to TickerK8 folder.
-        self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r')) # Get global config data
-        self.main_config = json.load(open(self.main_path+'/CONFIG/chart/main.json', 'r')) # Get main config data
-        self.chart_translate = json.load(open(self.main_path+'/CONFIG/chart/translate.json', 'r')) # Get main translate data
+        self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8')) # Get global config data
+        self.main_config = json.load(open(self.main_path+'/CONFIG/chart/main.json', 'r', encoding='utf-8')) # Get main config data
+        self.chart_translate = json.load(open(self.main_path+'/CONFIG/chart/translate.json', 'r', encoding='utf-8')) # Get main translate data
 #______________________________________________________________________________________________________________________
         """ Create objects """
         self.main_layout = QGridLayout(self)

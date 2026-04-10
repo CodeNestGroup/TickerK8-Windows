@@ -126,12 +126,12 @@ def CountryUi(self):
 
 def CountryReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BCountry.css').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BCountry{t}.css').read()
+    m = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BCountry.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BCountry{t}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
 
 def CountryRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/CCountryTranslate.json', 'r'))
+    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/CCountryTranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.MacroeconomicDataTitlel.setText(t['MacroeconomicDataTitlel'][l]+':')
     self.GDPUsdNameL.setText(t['GDPUsdNameL'][l]+':')
@@ -280,12 +280,12 @@ def MarketUi(self):
 
 def MarketReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BMarket.css').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BMarket{t}.css').read()
+    m = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BMarket.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BMarket{t}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
 
 def MarketRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/CMarketTranslate.json', 'r'))
+    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/CMarketTranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.MarketStatisticsTitleL.setText(t['MarketStatisticsTitleL'][l])
     self.ListedCompaniesMainNameL.setText(t['ListedCompaniesMainNameL'][l])
@@ -968,12 +968,12 @@ def StockUi(self):
 
 def StockReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BStock.css').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BStock{t}.css').read()
+    m = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BStock.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/BStock{t}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
 
 def StockRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/CStockTranslate.json', 'r'))
+    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/ObjectStats/CStockTranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.FundamentalDataTitleL.setText(t['FundamentalDataTitleL'][l])
     self.IndicatorsSubTitleL.setText(t['IndicatorsSubTitleL'][l])

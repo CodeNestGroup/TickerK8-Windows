@@ -28,7 +28,7 @@ from PyQt5.QtSvg import (
 def text_changed(self):
     """ Get config """
     _text = self.panel_search_lineedit.text()
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     _active_filters = _global_config['search_filters']
     """ Get data """
     database = sqlite3.connect(database=self.main_path+'/CONFIG/GLOBAL/local_data_prototype.db')
@@ -148,17 +148,17 @@ def text_changed(self):
 
 def filters_changed(self, index):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     """ Get data """
     _global_config['search_filters'][index] = not _global_config['search_filters'][index] 
-    json.dump(_global_config, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w'), indent=4) 
+    json.dump(_global_config, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4) 
     filters_load(self)
     text_changed(self)
 #______________________________________________________________________________________________________________________
 
 def filters_load(self):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     _active_filters = _global_config['search_filters']
     for index, f in enumerate(_active_filters, start=0):
         if f:
@@ -226,7 +226,7 @@ def add_object__lists(self, a_o):
     self.panel_add_scroll.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     self.panel_add_scroll_widget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     """ Set text """
-    _t = json.load(open(self.main_path+'/CONFIG/main_search/translate.json', 'r'))
+    _t = json.load(open(self.main_path+'/CONFIG/main_search/translate.json', 'r', encoding='utf-8'))
     _l = _global_config['language']
     self.panel_add_title_label.setText(_t['panel_add_title_label'][_l])
     self.panel_add_path_label.setText(f"{_t['panel_add_path_label'][_l]}")
@@ -319,7 +319,7 @@ def add_object_section_exit(self):
 
 def add_object_objects(self, choosen_section):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     """ Set deafoult """
     self.choosen_section_id = choosen_section
     self.choosen_section_name = list(_global_config['object_lists'][self.choosen_list][self.choosen_section_id].keys())[0]
@@ -404,10 +404,10 @@ def add_object_objects_exit(self):
 
 def add_object_to_list(self, place):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     conf = _global_config['object_lists'][self.choosen_list][self.choosen_section_id][self.choosen_section_name]
     conf.insert(place, self.add_object)
-    json.dump(_global_config, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w'), indent=4)
+    json.dump(_global_config, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
     self.parent.object_list_open()
     add_object_objects_exit(self)
     add_object_section_exit(self)

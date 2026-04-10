@@ -25,9 +25,9 @@ class Login_widget(QWidget):
         self.setParent(parent)
         """ Set paths, file name"""
         self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
-        self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
-        self.login_translate = json.load(open(self.main_path+'/CONFIG/login/translate.json', 'r'))
-        self.login_conf = json.load(open(self.main_path+'/CONFIG/login/background_conf.json', 'r'))
+        self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+        self.login_translate = json.load(open(self.main_path+'/CONFIG/login/translate.json', 'r', encoding='utf-8'))
+        self.login_conf = json.load(open(self.main_path+'/CONFIG/login/background_conf.json', 'r', encoding='utf-8'))
         self.index_changed = -10
         """ Create objects """
         self.login_layout = QGridLayout(self)

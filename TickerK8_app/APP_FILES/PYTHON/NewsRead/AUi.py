@@ -79,12 +79,12 @@ def NewsReadUi(self):
     self.HashTitleL.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
 
 def NewsReadReloadStyle(self):
-    m = open(f'{self.Path}/APP_FILES/PYTHON/NewsRead/BNewsRead.css').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/NewsRead/BNewsRead{self.Theme}.css').read()
+    m = open(f'{self.Path}/APP_FILES/PYTHON/NewsRead/BNewsRead.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/APP_FILES/PYTHON/NewsRead/BNewsRead{self.Theme}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
 
 def NewsReadRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/NewsRead/CNewsReadRetranslate.json', 'r'))
+    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/NewsRead/CNewsReadRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     ItemName = ''
     if self.NewsData[4]:

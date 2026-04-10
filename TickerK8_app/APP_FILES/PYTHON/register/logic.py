@@ -6,8 +6,8 @@ from PyQt5.QtWidgets import QLineEdit
 #______________________________________________________________________________________________________________________
 def show_hide_password(self):
     """ Variables """
-    _l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
-    _t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))['register_password_show_button']
+    _l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    _t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))['register_password_show_button']
     """ Set hide or show """
     if self.register_password_lineedit.echoMode() == QLineEdit.Normal: 
         self.register_password_lineedit.setEchoMode(QLineEdit.Password) 
@@ -18,8 +18,8 @@ def show_hide_password(self):
 #______________________________________________________________________________________________________________________
 
 def register_controller(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     wrong_data = 'border: 2px solid #c01414;'
     name = None
     email = None
@@ -87,33 +87,33 @@ def register_controller(self):
 
 
 def user_exists(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_name_lineedit.setStyleSheet('border: 2px solid #c01414;')
     self.register_name_label.setText(t['register_name_label'][1][l])
 
 def email_exists(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_emial_lineedit.setStyleSheet('border: 2px solid #c01414;')
     self.register_email_label.setText(t['register_email_label'][1][l])
 
 def phone_exists(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_phonenumber_lineedit.setStyleSheet('border: 2px solid #c01414;')
     self.register_phonenumber_lineedit.setText('')
     self.register_phonenumber_lineedit.setPlaceholderText(t['register_phonenumber_lineedit'][1][l])
 
 def reset_name(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_name_lineedit.setStyleSheet('border: 0;')
     self.register_name_label.setText(t['register_name_label'][0][l])
 
 def reset_email(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_emial_lineedit.setStyleSheet('border: 0;')
     self.register_name_label.setText(t['register_name_label'][0][l])
 #______________________________________________________________________________________________________________________
@@ -123,22 +123,22 @@ def reset_confirm_email(self):
 #______________________________________________________________________________________________________________________
 
 def reset_phone(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_phonenumber_lineedit.setStyleSheet('border: 0;')
     self.register_phonenumber_lineedit.setPlaceholderText(t['register_phonenumber_lineedit'][0][l])
 #______________________________________________________________________________________________________________________
 
 def reset_password(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_password_requirements_label.setText(f'{t['register_password_requirements_label'][0][l]}')
     self.register_password_lineedit.setStyleSheet('border: 0;')
 #______________________________________________________________________________________________________________________
 
 def reset_confirm_password(self):
-    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_password_requirements_label.setText(f'{t['register_password_requirements_label'][0][l]}')
     self.register_password_confirm_lineedit.setStyleSheet('border: 0;')
 #______________________________________________________________________________________________________________________

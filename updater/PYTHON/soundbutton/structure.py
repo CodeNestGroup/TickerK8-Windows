@@ -39,5 +39,5 @@ class QPushButton_sound(QPushButton):
             print('click')
 
     def check_config(self):
-        return json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['sound']['button']
+        return json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['sound']['button']
 #______________________________________________________________________________________________________________________

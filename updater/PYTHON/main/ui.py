@@ -58,7 +58,7 @@ def main_ui(self):
     self.discord_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def main_reload_style(self):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     t = g['theme']
     self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/main/'+t+'.css')).read())
     self.settings_button.setIcon(QIcon(load_svg(str(self.main_path+'/STYLE/IMG/icons/main/settings_vintage_elegance_d.svg'), 256, 256)))
@@ -91,8 +91,8 @@ def main_no_connect_ui(self):
     self.info_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     
 def main_no_connect_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.info_label.setText(t['info_label'][0][l])
 #______________________________________________________________________________________________________________________
 
@@ -116,8 +116,8 @@ def main_connect_ui(self):
     self.info_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def main_connect_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.info_label.setText(t['info_label'][1][l])
 #______________________________________________________________________________________________________________________
 
@@ -138,8 +138,8 @@ def none_update_ui(self):
     self.open_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def none_update_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.open_button.setText(t['open_button'][l])
 #______________________________________________________________________________________________________________________
 
@@ -160,8 +160,8 @@ def new_update_ui(self):
     self.download_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def new_update_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.download_button.setText(t['download_button'][l])
 #______________________________________________________________________________________________________________________
 
@@ -182,8 +182,8 @@ def start_update_ui(self):
     self.info_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def start_update_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.info_label.setText(t['info_label'][2][l])
 #______________________________________________________________________________________________________________________
 

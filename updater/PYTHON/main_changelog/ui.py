@@ -33,7 +33,7 @@ def changelog_ui(self):
     self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def changelog_reload_style(self):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     t = g['theme']
     self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/main_changelog/'+t+'.css')).read())
 #______________________________________________________________________________________________________________________
@@ -67,12 +67,12 @@ def no_connection_ui(self):
 
 
 def no_connection_reload_style(self):
-    t = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['theme']
+    t = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['theme']
     self.icon_label.setPixmap(load_svg(str(self.main_path+'/STYLE/IMG/icons/main_changelog/no_connection_'+t+'.svg'), 256, 256))
 
 def no_connection_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main_changelog/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/main_changelog/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.message_label.setText(t['message_label'][0][l])
 
 def loading_ui(self):
@@ -107,12 +107,12 @@ def loading_ui(self):
     self.dots_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def loading_reload_style(self):
-    t = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['theme']
+    t = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['theme']
     self.icon_label.setPixmap(load_svg(str(self.main_path+'/STYLE/IMG/icons/main_changelog/no_connection_'+t+'.svg'), 256, 256))
 
 def loading_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main_changelog/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/main_changelog/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.message_label.setText(t['message_label'][1][l])
 #______________________________________________________________________________________________________________________
 

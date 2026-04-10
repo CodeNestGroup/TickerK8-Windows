@@ -67,14 +67,14 @@ def changelog_ui(self):
     self.exit_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     
 def changelog_reload_style(self):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     t = g['theme']
     self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/changelog/'+t+'.css')).read())
     self.exit_button.setIcon(QIcon(load_svg(str(self.main_path+'/STYLE/IMG/icons/changelog/exit_vintage_elegance_d.svg'), 256, 256)))
 
 def changelog_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/changelog/translate.json', 'r'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+    t = json.load(open(self.main_path+'/CONFIG/changelog/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     c = self.changelog_data
     self.title_label.setText(t['title_label'][l])
     self.update_title_label.setText(c['name'])

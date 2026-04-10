@@ -27,8 +27,8 @@ def ListObjectUi(self):
     self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def ListObjectReloadStyle(self):
-    m = open(f'{self.Path}/APP_FILES/PYTHON/ListObject/BMain.css').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/ListObject/B{self.Theme}.css').read()
+    m = open(f'{self.Path}/APP_FILES/PYTHON/ListObject/BMain.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/APP_FILES/PYTHON/ListObject/B{self.Theme}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
     
 def NullDataUi(self):
@@ -39,7 +39,7 @@ def NullDataUi(self):
     self.NullDataL.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def NullDataRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/ListObject/CNullDataRetranslate.json', 'r'))
+    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/ListObject/CNullDataRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.NullDataL.setText(t['NullDataL'][l])
 

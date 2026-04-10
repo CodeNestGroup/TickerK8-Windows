@@ -25,7 +25,7 @@ from .candle_chart import Candle_chart
 def create_chart(self):
     """ Get data """
     chart_object = self.global_config['mid_object']
-    chart_data = list(json.load(open(self.main_path+'/test_chart_data/AGX100/agx100_1min.json', 'r')))
+    chart_data = list(json.load(open(self.main_path+'/test_chart_data/AGX100/agx100_1min.json', 'r', encoding='utf-8')))
     _background_config = self.background_config # Get background config
     _chart_config = self.chart_config # Get chart config
 #______________________________________________________________________________________________________________________
@@ -436,9 +436,9 @@ def settings_widget(self):
 #######################################################################################################################
 """ Save setting """
 def save_setting(self, conf, file, var):
-    with open(self.main_path+'/CONFIG/chart/{file}.json', 'w') as _w:
+    with open(self.main_path+'/CONFIG/chart/{file}.json', 'w', encoding='utf-8') as _w:
         json.dump(conf, _w, indent=4)
-    var = json.load(open(self.main_path+'/CONFIG/chart/{file}.json', 'r'))
+    var = json.load(open(self.main_path+'/CONFIG/chart/{file}.json', 'r', encoding='utf-8'))
 #######################################################################################################################
 """ Exit settings widget """
 def exit_settings_widget(self):
@@ -461,7 +461,7 @@ def full_screan(self):
 #######################################################################################################################
 """ Reload main config """
 def reload_main_config(self):
-    with open(self.main_path+'/CONFIG/chart/main.json', 'w') as _w:
+    with open(self.main_path+'/CONFIG/chart/main.json', 'w', encoding='utf-8') as _w:
         json.dump(self.main_config, _w, indent=4)
-    self.main_config = json.load(open(self.main_path+'/CONFIG/chart/main.json', 'r')) # Get main config data
+    self.main_config = json.load(open(self.main_path+'/CONFIG/chart/main.json', 'r', encoding='utf-8')) # Get main config data
 #######################################################################################################################

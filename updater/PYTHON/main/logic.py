@@ -96,7 +96,7 @@ class get_releases(QThread):
 
 def check_update(self, release_data):
     g_v = release_data[0]['published_at']
-    l_v = json.load(open(self.main_path+'/CONFIG/GLOBAL/changelog.json', 'r'))['published_at']
+    l_v = json.load(open(self.main_path+'/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))['published_at']
     g_t = datetime.fromisoformat(g_v.replace("Z", "+00:00"))
     l_t = datetime.fromisoformat(l_v.replace("Z", "+00:00"))
     if g_t <= l_t:
@@ -113,7 +113,7 @@ def none_update(self):
 
 def open_main_app(self):
     try:
-        subprocess.Popen(["python", "__core__.py"])
+        subprocess.Popen(["python", str(pathlib.Path(__file__).resolve().parents[3])+"/TickerK8_app/APP_FILES/PYTHON/__core__.py"])
         sys.exit(0)
     except:
         pass
@@ -152,12 +152,12 @@ class controller_download(QThread):
         super().__init__()
         self.backup_path = str(pathlib.Path(__file__).resolve().parents[4])
         self.main_path = str(pathlib.Path(__file__).resolve().parents[3])
-        self.capacity = self.set_speed(json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r'))['capacity'])
+        self.capacity = self.set_speed(json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['capacity'])
         self.update_folder = None
         self.update_json_file_list = None
         self.zip_buffer = io.BytesIO()
-        self.t = json.load(open(self.main_path+'/updater/CONFIG/main/translate.json', 'r'))
-        self.l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r'))['language']
+        self.t = json.load(open(self.main_path+'/updater/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+        self.l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
 
     def run(self):
         self.backup()
@@ -245,7 +245,7 @@ class controller_download(QThread):
     def update_compatibility(self):
         try:
             self.progress.emit(self.t['info_label'][5][self.l])
-            u = json.load(open(self.backup_path+self.update_folder+'updater/CONFIG/GLOBAL/app_file_list.json', 'r'))
+            u = json.load(open(self.backup_path+self.update_folder+'updater/CONFIG/GLOBAL/app_file_list.json', 'r', encoding='utf-8'))
             t = len(u)
             for file, check_sum in u.items():
                 if os.path.exists(self.backup_path+self.update_folder+file):
@@ -305,7 +305,7 @@ class controller_download(QThread):
 
     def calculate_sha256(self, file):
         sha256 = hashlib.sha256()
-        f = open(file, "rb")
+        f = open(file, "rb", encoding='utf-8')
         while chunk := f.read(4096):
             sha256.update(chunk)
         return sha256.hexdigest()
