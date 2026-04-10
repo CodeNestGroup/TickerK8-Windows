@@ -113,7 +113,7 @@ def none_update(self):
 
 def open_main_app(self):
     try:
-        subprocess.Popen(['/bin/bash', self.main_path[:-7]+'/TickerK8.bat'])
+        subprocess.Popen(['/bin/bash', self.main_path[:-7]+'/TickerK8.sh'])
         sys.exit(0)
     except:
         pass

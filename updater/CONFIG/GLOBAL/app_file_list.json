@@ -1,6 +1,6 @@
 {   
-    "/Launcher.bat": "29c000ac63e16ff5c281281fb6432b1ff9f8f22a13d01139552b4090b6979c72",
-    "/TickerK8.bat": "04d58c5b2cd0c657432868a6a52dc72bf718d06df659d593fa04a4da1fd0e757",
+    "/Launcher.bat": "a29e8d42c3e80a178f7375e35d774a2d2a88aa047e7c1c295bb4927c105104fd",
+    "/TickerK8.bat": "df43d8becabb4bfb0c5cac09a68135336baae2c609294d9c3ba6a0b2c758a28c",
     "/updater/CONFIG/changelog/translate.json": "fdaa7dcefbb66e5c8e267564c432b781268839c3559dcfbfd662831376153605",
     "/updater/CONFIG/GLOBAL/app_file_list.json": "config",
     "/updater/CONFIG/GLOBAL/changelog.json": "03798752c799fb51e953535768584d6d9feab2dd33626e7342bf1f51f577a7b5",
@@ -18,7 +18,7 @@
     "/updater/PYTHON/changelog/structure.py": "c2d2863580d14d4cd57040d7c2c6259af5bb4c7fc035cec0aefdb2302b86554f",
     "/updater/PYTHON/changelog/ui.py": "02b7d5c313a1474478e83f32dd2ae146b699beab7f45eaf9ece9ee11ad8b245b",
     "/updater/PYTHON/main/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "/updater/PYTHON/main/logic.py": "d1c6c1b43c2542dc25976b2b133d1ea32753d88a37b5292ac6d1ae4364e30a07",
+    "/updater/PYTHON/main/logic.py": "0b571feaf1e4c58b0f54beef78dda936cc5501a7af588bb8d96262d3f1488f11",
     "/updater/PYTHON/main/structure.py": "6536998d00c78edcbd28f3ceea93c76d51db6ae3fae3e32a92aa74e7fd20e27d",
     "/updater/PYTHON/main/ui.py": "a23d908959096228bb1d780845cabfe3c9bd102c8c8ddd9593c63aacddcd6394",
     "/updater/PYTHON/main_changelog/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
