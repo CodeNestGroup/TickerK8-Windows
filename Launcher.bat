@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 REM =========================
-REM CONFIG
+REM PROJECT SETUP
 REM =========================
 set "PROJECT_DIR=%~dp0"
 set "VENV_DIR=%PROJECT_DIR%.venv"
@@ -14,8 +14,39 @@ echo PROJECT_DIR: %PROJECT_DIR%
 echo =========================================
 
 REM =========================
-REM FIND PYTHON (py launcher preferred)
+REM CHECK / INSTALL PYTHON
 REM =========================
+where py >nul 2>nul
+if %errorlevel%==0 (
+    set "PYTHON_CMD=py -3"
+    goto PY_OK
+)
+
+where python >nul 2>nul
+if %errorlevel%==0 (
+    set "PYTHON_CMD=python"
+    goto PY_OK
+)
+
+echo [INFO] Python nie znaleziony - instalacja...
+
+set "PY_VERSION=3.14.0"
+set "PY_INSTALLER=python-%PY_VERSION%-amd64.exe"
+set "PY_URL=https://www.python.org/ftp/python/%PY_VERSION%/%PY_INSTALLER%"
+
+powershell -Command "Invoke-WebRequest '%PY_URL%' -OutFile '%PY_INSTALLER%'"
+
+if not exist "%PY_INSTALLER%" (
+    echo [ERROR] Nie udalo sie pobrac Pythona
+    pause
+    exit /b 1
+)
+
+echo Instalacja Pythona...
+
+start /wait "" "%PY_INSTALLER%" ^
+    /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+
 where py >nul 2>nul
 if %errorlevel%==0 (
     set "PYTHON_CMD=py -3"
@@ -24,21 +55,21 @@ if %errorlevel%==0 (
     if %errorlevel%==0 (
         set "PYTHON_CMD=python"
     ) else (
-        echo [ERROR] Nie znaleziono Pythona (py ani python)
-        echo Zainstaluj: https://www.python.org/downloads/
+        echo [ERROR] Instalacja Pythona nie powiodla sie
         pause
         exit /b 1
     )
 )
 
+:PY_OK
 echo Using Python: %PYTHON_CMD%
 
 REM =========================
-REM FUNCTION: CREATE VENV
+REM CREATE VENV FUNCTION
 REM =========================
 :CREATE_VENV
 echo.
-echo [INFO] Tworzenie virtualenv...
+echo [INFO] Tworzenie venv...
 
 if exist "%VENV_DIR%" (
     rmdir /s /q "%VENV_DIR%" 2>nul
@@ -48,7 +79,6 @@ if exist "%VENV_DIR%" (
 
 if not exist "%VENV_DIR%\Scripts\activate.bat" (
     echo [ERROR] Nie udalo sie utworzyc venv
-    echo Sprawdz instalacje Pythona i uprawnienia folderu
     pause
     exit /b 1
 )
@@ -78,7 +108,7 @@ REM CHECK PIP
 REM =========================
 python -m pip --version >nul 2>nul
 if %errorlevel% neq 0 (
-    echo [WARN] Pip uszkodzony - reset venv
+    echo [WARN] pip uszkodzony → rebuild venv
     call :CREATE_VENV
     call "%VENV_DIR%\Scripts\activate.bat"
 )
@@ -86,32 +116,24 @@ if %errorlevel% neq 0 (
 REM =========================
 REM UPGRADE PIP
 REM =========================
-echo.
 echo [INFO] Aktualizacja pip...
 python -m pip install --upgrade pip
 
-if %errorlevel% neq 0 (
-    echo [ERROR] Nie udalo sie zaktualizowac pip
-    pause
-    exit /b 1
-)
-
 REM =========================
-REM INSTALL REQUIREMENTS
+REM INSTALL REQUIREMENTS (with retry)
 REM =========================
 if not exist "%REQ_FILE%" (
-    echo [ERROR] Brak pliku requirements:
+    echo [ERROR] Brak requirements:
     echo %REQ_FILE%
     pause
     exit /b 1
 )
 
-echo.
 echo [INFO] Instalacja zaleznosci...
 pip install --no-cache-dir -r "%REQ_FILE%"
 
 if %errorlevel% neq 0 (
-    echo [WARN] Blad instalacji - reset venv i retry
+    echo [WARN] Blad instalacji → reset venv
 
     call :CREATE_VENV
     call "%VENV_DIR%\Scripts\activate.bat"
@@ -124,7 +146,7 @@ REM =========================
 REM RUN APP
 REM =========================
 if not exist "%APP_FILE%" (
-    echo [ERROR] Brak pliku aplikacji:
+    echo [ERROR] Brak aplikacji:
     echo %APP_FILE%
     pause
     exit /b 1
@@ -134,6 +156,4 @@ echo.
 echo [INFO] Start aplikacji...
 python "%APP_FILE%"
 
-echo.
-echo [INFO] Zakonczono.
 pause
