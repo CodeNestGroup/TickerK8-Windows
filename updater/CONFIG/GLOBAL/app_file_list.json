@@ -1,6 +1,4 @@
 {   
-    "/Launcher.bat": "95b9ed56dd982108d892fcf584286327c0b860d9fc50abfc165a5b9380fc9279",
-    "/TickerK8.bat": "04d58c5b2cd0c657432868a6a52dc72bf718d06df659d593fa04a4da1fd0e757",
     "/updater/CONFIG/changelog/translate.json": "fdaa7dcefbb66e5c8e267564c432b781268839c3559dcfbfd662831376153605",
     "/updater/CONFIG/GLOBAL/app_file_list.json": "config",
     "/updater/CONFIG/GLOBAL/changelog.json": "03798752c799fb51e953535768584d6d9feab2dd33626e7342bf1f51f577a7b5",
@@ -18,7 +16,7 @@
     "/updater/PYTHON/changelog/structure.py": "c2d2863580d14d4cd57040d7c2c6259af5bb4c7fc035cec0aefdb2302b86554f",
     "/updater/PYTHON/changelog/ui.py": "02b7d5c313a1474478e83f32dd2ae146b699beab7f45eaf9ece9ee11ad8b245b",
     "/updater/PYTHON/main/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "/updater/PYTHON/main/logic.py": "0b571feaf1e4c58b0f54beef78dda936cc5501a7af588bb8d96262d3f1488f11",
+    "/updater/PYTHON/main/logic.py": "1bc897c906cd8553a84f4b501951ab692289b47bc2d85a797af78b868496fdeb",
     "/updater/PYTHON/main/structure.py": "6536998d00c78edcbd28f3ceea93c76d51db6ae3fae3e32a92aa74e7fd20e27d",
     "/updater/PYTHON/main/ui.py": "a23d908959096228bb1d780845cabfe3c9bd102c8c8ddd9593c63aacddcd6394",
     "/updater/PYTHON/main_changelog/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
