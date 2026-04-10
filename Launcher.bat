@@ -1,4 +1,4 @@
-@echo off
+@echo on
 setlocal enabledelayedexpansion
 
 echo ============================
@@ -31,16 +31,14 @@ if not defined PYTHON_EXEC (
     powershell -Command "Invoke-WebRequest -Uri '%PY_URL%' -OutFile '%PY_INSTALLER%'"
 
     if not exist "%PY_INSTALLER%" (
-        echo [ERROR] Download fail
+        echo [FATAL ERROR] Download fail
         pause
-        exit /b 1
+        goto END
     )
 
     "%PY_INSTALLER%" /quiet InstallAllUsers=0 PrependPath=1 Include_test=0
-
     timeout /t 5 >nul
 
-    REM --- fallback ścieżki ---
     if exist "%LocalAppData%\Programs\Python\Python314\python.exe" (
         set PYTHON_EXEC=%LocalAppData%\Programs\Python\Python314\python.exe
     )
@@ -53,64 +51,98 @@ if not defined PYTHON_EXEC (
     )
 
     if not defined PYTHON_EXEC (
-        echo [ERROR] Python nadal niewidoczny
+        echo [FATAL ERROR] Python nadal niewidoczny
         pause
-        exit /b 1
+        goto END
     )
 )
 
 echo Python: %PYTHON_EXEC%
 
-REM --- funkcja create_venv ---
+REM --- funkcja venv ---
 :CREATE_VENV
-echo Tworzenie virtualenv...
-if exist "%VENV_DIR%" rmdir /s /q "%VENV_DIR%"
-%PYTHON_EXEC% -m venv "%VENV_DIR%"
-if %errorlevel% neq 0 (
-    echo [ERROR] venv fail
-    pause
-    exit /b 1
+echo ============================
+echo TWORZENIE VENV
+echo ============================
+
+if exist "%VENV_DIR%" (
+    echo Usuwam stary venv...
+    rmdir /s /q "%VENV_DIR%"
 )
+
+echo Uruchamiam venv:
+echo %PYTHON_EXEC% -m venv "%VENV_DIR%"
+
+%PYTHON_EXEC% -m venv "%VENV_DIR%"
+set VENV_ERR=%errorlevel%
+
+echo ERRORLEVEL venv: !VENV_ERR!
+
+if not "!VENV_ERR!"=="0" (
+    echo [FATAL ERROR] venv creation failed
+    pause
+    goto END
+)
+
 goto :eof
 
-REM --- jeśli brak venv ---
+REM --- tworzenie venv jeśli brak ---
 if not exist "%VENV_DIR%" (
     call :CREATE_VENV
 )
 
-REM --- python z venv ---
 set VENV_PY=%VENV_DIR%\Scripts\python.exe
 
-REM --- sprawdź pip ---
+if not exist "%VENV_PY%" (
+    echo [FATAL ERROR] brak python w venv
+    pause
+    goto END
+)
+
+REM --- pip check ---
 "%VENV_PY%" -m pip --version >nul 2>nul
-if %errorlevel% neq 0 (
-    echo pip uszkodzony → rebuild
+if not %errorlevel%==0 (
+    echo pip broken → rebuild venv
     call :CREATE_VENV
 )
 
-echo Aktualizacja pip...
-"%VENV_PY%" -m pip install --upgrade pip
+echo ============================
+echo UPDATE PIP
+echo ============================
+"%VENV_PY%" -m pip install --upgrade pip --verbose
 
-echo Naprawa SSL (certyfikaty)...
-"%VENV_PY%" -m pip install certifi
+echo ============================
+echo CERTYFIKATY SSL
+echo ============================
+"%VENV_PY%" -m pip install certifi --verbose
 
-echo Instalacja zależności...
-"%VENV_PY%" -m pip install --upgrade --no-cache-dir -r "%REQ_FILE%"
+echo ============================
+echo INSTALACJA REQUIREMENTS
+echo ============================
+"%VENV_PY%" -m pip install --upgrade --no-cache-dir -r "%REQ_FILE%" --verbose
 
-if %errorlevel% neq 0 (
-    echo Retry instalacji...
+if not %errorlevel%==0 (
+    echo [WARN] retry instalacji...
+
     call :CREATE_VENV
-    "%VENV_PY%" -m pip install --upgrade pip
-    "%VENV_PY%" -m pip install certifi
-    "%VENV_PY%" -m pip install --no-cache-dir -r "%REQ_FILE%"
+
+    "%VENV_PY%" -m pip install --upgrade pip --verbose
+    "%VENV_PY%" -m pip install certifi --verbose
+    "%VENV_PY%" -m pip install --no-cache-dir -r "%REQ_FILE%" --verbose
 )
 
-echo Start aplikacji...
+echo ============================
+echo START APLIKACJI
+echo ============================
 "%VENV_PY%" "%PROJECT_DIR%\updater\PYTHON\__core__.py"
 
+echo ERRORLEVEL APP: !errorlevel!
+
+:END
 echo.
 echo ============================
-echo KONIEC
+echo KONIEC SKRYPTU
 echo ============================
 pause
 endlocal
+exit /b
