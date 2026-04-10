@@ -1,67 +1,139 @@
 @echo off
 setlocal enabledelayedexpansion
 
-REM --- katalog projektu ---
-set PROJECT_DIR=%~dp0
-set VENV_DIR=%PROJECT_DIR%.venv
-set REQ_FILE=%PROJECT_DIR%updater\CONFIG\requirements.txt
+REM =========================
+REM CONFIG
+REM =========================
+set "PROJECT_DIR=%~dp0"
+set "VENV_DIR=%PROJECT_DIR%.venv"
+set "REQ_FILE=%PROJECT_DIR%updater\CONFIG\requirements.txt"
+set "APP_FILE=%PROJECT_DIR%updater\PYTHON\__core__.py"
 
+echo =========================================
 echo PROJECT_DIR: %PROJECT_DIR%
+echo =========================================
 
-REM --- znajdź python ---
-where python >nul 2>nul
+REM =========================
+REM FIND PYTHON (py launcher preferred)
+REM =========================
+where py >nul 2>nul
 if %errorlevel%==0 (
-    set PYTHON_EXEC=python
+    set "PYTHON_CMD=py -3"
 ) else (
-    echo [ERROR] Python nie znaleziony!
-    echo Zainstaluj Python: https://www.python.org/downloads/windows/
+    where python >nul 2>nul
+    if %errorlevel%==0 (
+        set "PYTHON_CMD=python"
+    ) else (
+        echo [ERROR] Nie znaleziono Pythona (py ani python)
+        echo Zainstaluj: https://www.python.org/downloads/
+        pause
+        exit /b 1
+    )
+)
+
+echo Using Python: %PYTHON_CMD%
+
+REM =========================
+REM FUNCTION: CREATE VENV
+REM =========================
+:CREATE_VENV
+echo.
+echo [INFO] Tworzenie virtualenv...
+
+if exist "%VENV_DIR%" (
+    rmdir /s /q "%VENV_DIR%" 2>nul
+)
+
+%PYTHON_CMD% -m venv "%VENV_DIR%"
+
+if not exist "%VENV_DIR%\Scripts\activate.bat" (
+    echo [ERROR] Nie udalo sie utworzyc venv
+    echo Sprawdz instalacje Pythona i uprawnienia folderu
     pause
     exit /b 1
 )
 
-REM --- funkcja create_venv ---
-:CREATE_VENV
-echo Tworzenie virtualenv...
-rmdir /s /q "%VENV_DIR%" 2>nul
-%PYTHON_EXEC% -m venv "%VENV_DIR%"
-if %errorlevel% neq 0 (
-    echo [ERROR] Nie udało się stworzyć venv
-    pause
-    exit /b 1
-)
 goto :eof
 
-REM --- jeśli brak venv ---
-if not exist "%VENV_DIR%" (
+REM =========================
+REM CHECK VENV
+REM =========================
+if not exist "%VENV_DIR%\Scripts\activate.bat" (
     call :CREATE_VENV
 )
 
-REM --- aktywacja ---
+REM =========================
+REM ACTIVATE VENV
+REM =========================
 call "%VENV_DIR%\Scripts\activate.bat"
 
-REM --- sprawdź pip ---
+if %errorlevel% neq 0 (
+    echo [ERROR] Nie udalo sie aktywowac venv
+    pause
+    exit /b 1
+)
+
+REM =========================
+REM CHECK PIP
+REM =========================
 python -m pip --version >nul 2>nul
 if %errorlevel% neq 0 (
-    echo pip uszkodzony → rebuild venv
+    echo [WARN] Pip uszkodzony - reset venv
     call :CREATE_VENV
     call "%VENV_DIR%\Scripts\activate.bat"
 )
 
-echo Aktualizacja pip...
+REM =========================
+REM UPGRADE PIP
+REM =========================
+echo.
+echo [INFO] Aktualizacja pip...
 python -m pip install --upgrade pip
 
-echo Instalacja zależności...
-pip install --upgrade --no-cache-dir -r "%REQ_FILE%"
+if %errorlevel% neq 0 (
+    echo [ERROR] Nie udalo sie zaktualizowac pip
+    pause
+    exit /b 1
+)
+
+REM =========================
+REM INSTALL REQUIREMENTS
+REM =========================
+if not exist "%REQ_FILE%" (
+    echo [ERROR] Brak pliku requirements:
+    echo %REQ_FILE%
+    pause
+    exit /b 1
+)
+
+echo.
+echo [INFO] Instalacja zaleznosci...
+pip install --no-cache-dir -r "%REQ_FILE%"
 
 if %errorlevel% neq 0 (
-    echo Błąd instalacji → reset venv
+    echo [WARN] Blad instalacji - reset venv i retry
+
     call :CREATE_VENV
     call "%VENV_DIR%\Scripts\activate.bat"
+
     python -m pip install --upgrade pip
     pip install --no-cache-dir -r "%REQ_FILE%"
 )
 
-echo Start aplikacji...
-python "%PROJECT_DIR%updater\PYTHON\__core__.py"
+REM =========================
+REM RUN APP
+REM =========================
+if not exist "%APP_FILE%" (
+    echo [ERROR] Brak pliku aplikacji:
+    echo %APP_FILE%
+    pause
+    exit /b 1
+)
 
+echo.
+echo [INFO] Start aplikacji...
+python "%APP_FILE%"
+
+echo.
+echo [INFO] Zakonczono.
 pause
