@@ -1,5 +1,4 @@
 """ Import packages """
-import pathlib
 import json
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
@@ -17,6 +16,7 @@ from PyQt5.QtCore import (
 """ Import register modules """
 from .ui import *
 from .logic import *
+from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
 
 class Register_widget(QWidget):
@@ -26,7 +26,7 @@ class Register_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """ Set paths, file name"""
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         """ Create objects """
         self.register_layout = QGridLayout(self)
         self.register_name_subtitle_label = QLabel(self)

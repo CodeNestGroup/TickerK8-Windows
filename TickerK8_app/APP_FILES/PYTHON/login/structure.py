@@ -1,5 +1,4 @@
 """ Import packages """
-import pathlib
 import json
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
@@ -16,6 +15,7 @@ from PyQt5.QtCore import (
 """ Import login modules """
 from .ui import *
 from .logic import *
+from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
 
 class Login_widget(QWidget):
@@ -24,7 +24,7 @@ class Login_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """ Set paths, file name"""
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
         self.login_translate = json.load(open(self.main_path+'/CONFIG/login/translate.json', 'r', encoding='utf-8'))
         self.login_conf = json.load(open(self.main_path+'/CONFIG/login/background_conf.json', 'r', encoding='utf-8'))

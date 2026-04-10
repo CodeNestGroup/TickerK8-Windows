@@ -3,14 +3,14 @@ import sqlite3
 import pymysql
 import json
 import requests
-import pathlib
 from cryptography.fernet import Fernet
+from ResourcePath.Structure import ResourcePath
 
 class database():
     def __init__(self):
         super().__init__()
         self.user_dict = {}
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         self.conn = self.Connect_offline_database()
 
 # --- Offline database ---

@@ -1,5 +1,4 @@
 """ Import packages """
-import pathlib 
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
     QWidget,
@@ -17,6 +16,7 @@ from .ui import *
 from .logic import *
 """ Import button modules """
 from soundbutton.structure import QPushButton_sound
+from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
 
 class Settings_widget(QWidget):
@@ -26,7 +26,7 @@ class Settings_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """" Set paths, file name """
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         """ Create objects """
         self.layout = QGridLayout(self)
         self.menu_scroll = QScrollArea(self)

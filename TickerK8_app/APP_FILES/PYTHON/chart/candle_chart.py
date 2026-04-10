@@ -1,5 +1,4 @@
 """ Import """
-import pathlib # For get path to folders
 import json # For json files
 #______________________________________________________________________________________________________________________
 """ Import from QtWidgets """
@@ -25,6 +24,7 @@ from PyQt5.QtCore import (
     Qt, # Qt
     QPointF # Point
 )
+from ResourcePath.Structure import ResourcePath
 #######################################################################################################################
 """ Candy chart """
 class Candle_chart(QGraphicsScene):
@@ -33,7 +33,7 @@ class Candle_chart(QGraphicsScene):
         super().__init__(parent)
 #______________________________________________________________________________________________________________________
         """ Get data """
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2]) # Set main path, path to TickerK8 folder.
+        self.main_path = ResourcePath(2) # Set main path, path to TickerK8 folder.
         self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', encoding='utf-8')) # Get global config.
         self.data = data # Data for creating chart 
 #______________________________________________________________________________________________________________________

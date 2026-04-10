@@ -1,6 +1,5 @@
 #   --- Import packages ---
 import json
-import pathlib
 #   --- Import PyQt5 packages ---
 from PyQt5.QtWidgets import (
     QSizePolicy
@@ -17,6 +16,7 @@ from PyQt5.QtGui import (
 from PyQt5.QtSvg import (
     QSvgRenderer
 )
+from ResourcePath.Structure import ResourcePath
 
 def SettingsUi(self):
     self.setObjectName('SettingsW')
@@ -263,7 +263,7 @@ def UpdateUi(self):
 
 def UpdateRetranslate(self):
     t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Settings/CUpdatePageRetranslate.json', 'r', encoding='utf-8'))
-    p = str(pathlib.Path(__file__).resolve().parents[4])
+    p = ResourcePath(4)
     u = json.load(open(p+'/updater/CONFIG/GLOBAL/changelog.json', 'r'))
     l = self.Language
     self.PanelTitleL.setText(t['PanelTitleL'][l])

@@ -1,5 +1,4 @@
 """ Import packages """
-import pathlib 
 import json
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (

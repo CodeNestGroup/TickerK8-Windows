@@ -1,5 +1,4 @@
 """ Import packages """
-import pathlib
 import json
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
@@ -17,6 +16,7 @@ from PyQt5.QtCore import (
 """ Import main search modules """
 from .ui import *
 from .logic import *
+from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
 
 class Main_search_widget(QWidget):
@@ -26,7 +26,7 @@ class Main_search_widget(QWidget):
         self.setParent(parent)
         self.parent= parent
         """ Set paths, file name"""
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         self.add_object = None
         """ Create objects """
         self.main_layout = QGridLayout(self)

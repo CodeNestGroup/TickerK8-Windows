@@ -1,5 +1,4 @@
 """ Import packages """
-import pathlib 
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
     QWidget,
@@ -18,6 +17,7 @@ from .logic import *
 from soundbutton.structure import QPushButton_sound
 from main_changelog.structure import Changelog_widget
 #______________________________________________________________________________________________________________________
+from ResourcePath.Structure import ResourcePath
 
 class Main_widget(QWidget):
     def __init__(self, parent):
@@ -25,7 +25,7 @@ class Main_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """" Set paths, file name """
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         self.last_ping = False
         self.info_label = None
         self.download_button = None

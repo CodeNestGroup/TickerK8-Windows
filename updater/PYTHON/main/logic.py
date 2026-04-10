@@ -3,7 +3,6 @@ import json
 import sys
 import os
 import subprocess
-import pathlib
 import io
 import shutil
 import zipfile
@@ -38,7 +37,9 @@ from .ui import (
     start_update_ui,
     start_update_retranslate
 )
+from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
+from ResourcePath.Structure import ResourcePath
 
 def open_link(u):
     try:
@@ -113,7 +114,7 @@ def none_update(self):
 
 def open_main_app(self):
     try:
-        subprocess.Popen(["python", str(pathlib.Path(__file__).resolve().parents[3])+"/TickerK8_app/APP_FILES/PYTHON/__core__.py"])
+        subprocess.Popen(["python", ResourcePath(3)+"/TickerK8_app/APP_FILES/PYTHON/__core__.py"])
         sys.exit(0)
     except:
         pass
@@ -150,8 +151,8 @@ class controller_download(QThread):
     Init, creating items, set base variables like paths, screen size, etc. """
     def __init__(self):
         super().__init__()
-        self.backup_path = str(pathlib.Path(__file__).resolve().parents[4])
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[3])
+        self.backup_path = ResourcePath(4)
+        self.main_path = ResourcePath(3)
         self.capacity = self.set_speed(json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['capacity'])
         self.update_folder = None
         self.update_json_file_list = None

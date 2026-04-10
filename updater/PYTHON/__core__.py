@@ -1,6 +1,5 @@
 """ Import packages """
 import sys
-import pathlib
 import socket
 import time
 """ Import PyQt5 packages """
@@ -19,6 +18,7 @@ from PyQt5.QtGui import (
     QFont
     )
 """ Import application modules """
+from ResourcePath.Structure import ResourcePath
 from main.structure import Main_widget
 from settings.structure import Settings_widget
 from changelog.structure import Changelog_widget
@@ -127,7 +127,7 @@ class app_controller(QWidget):
 #______________________________________________________________________________________________________________________
 
 def set_font():
-    font_id = QFontDatabase.addApplicationFont(str(pathlib.Path(__file__).resolve().parents[2])+'/updater/STYLE/FONTS/NotoSerif-VariableFont_wdth,wght.ttf')
+    font_id = QFontDatabase.addApplicationFont(str(ResourcePath(3)+'/updater/STYLE/FONTS/NotoSerif-VariableFont_wdth,wght.ttf'))
     font_families = QFontDatabase.applicationFontFamilies(font_id) 
     return QFont(font_families[0])
 #______________________________________________________________________________________________________________________

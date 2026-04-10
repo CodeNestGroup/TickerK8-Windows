@@ -1,5 +1,4 @@
 """ Import """
-import pathlib # For get path to folders
 import json # For json files
 import sqlite3 # For database data 
 from PyQt5.QtWidgets import (

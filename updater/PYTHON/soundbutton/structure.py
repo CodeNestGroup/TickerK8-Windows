@@ -1,6 +1,5 @@
 """ Import packages """
 import json
-import pathlib
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
     QPushButton
@@ -8,6 +7,7 @@ from PyQt5.QtWidgets import (
 """ Import shadow button modules """
 from .ui import *
 from .logic import *
+from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
 
 class QPushButton_sound(QPushButton):
@@ -15,7 +15,7 @@ class QPushButton_sound(QPushButton):
         super().__init__()
         self.setParent(parent)
         """" Set paths, file name """
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         self.clicked.connect(self.click_sound) 
 
     def enterEvent(self, event):

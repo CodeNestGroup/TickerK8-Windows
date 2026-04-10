@@ -1,5 +1,4 @@
 """ Import packages """
-import pathlib
 import json
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
@@ -18,6 +17,7 @@ from PyQt5.QtCore import (
 """ Import main list pacakges """
 from .ui import *
 from .logic import *
+from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
 
 class Main_news_list_widget(QWidget):
@@ -29,7 +29,7 @@ class Main_news_list_widget(QWidget):
         self.parent = parent
         self.news_type = news_type
         """ Set paths, file name"""
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         """ Create objects """
         self.main_layout = QGridLayout(self) 
         self.panel_widget = QWidget(self)

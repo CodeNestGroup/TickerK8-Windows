@@ -1,5 +1,4 @@
 """ Import packages """
-import pathlib 
 """ Import PyQt5 packages """
 from PyQt5.QtWidgets import (
     QWidget,
@@ -13,6 +12,7 @@ from .ui import *
 from .logic import *
 """ Import custom modules """
 from soundbutton.structure import QPushButton_sound
+from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
 
 class Changelog_widget(QWidget):
@@ -21,7 +21,7 @@ class Changelog_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """" Set paths, file name """
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         if data == '':
             data = json.load(open(self.main_path+'/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))
         self.changelog_data = data

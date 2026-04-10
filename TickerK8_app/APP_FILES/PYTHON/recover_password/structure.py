@@ -1,5 +1,4 @@
 """ Import """
-import pathlib # For get path to folders
 import json # For json files
 #______________________________________________________________________________________________________________________
 """ Import PyQt5 Widgets """
@@ -17,6 +16,7 @@ from .ui import *
 #______________________________________________________________________________________________________________________
 """ Import recover password logic """
 from .logic import *
+from ResourcePath.Structure import ResourcePath
 #######################################################################################################################
 """ Recover password widget """
 class Recover_password_widget(QWidget):
@@ -27,7 +27,7 @@ class Recover_password_widget(QWidget):
         self.setParent(parent) # Set parent
 #______________________________________________________________________________________________________________________
         """ Set paths, file name"""
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2]) # Set main path, path to TickerK8 folder.
+        self.main_path = ResourcePath(2) # Set main path, path to TickerK8 folder.
         self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8')) # Get global config data
         self.recover_password_translate = json.load(open(self.main_path+'/CONFIG/recover_password/translate.json', 'r', encoding='utf-8')) # Get global translate data
 #______________________________________________________________________________________________________________________

@@ -1,6 +1,5 @@
 #   --- Import ---
 import sys
-import pathlib
 import json
 from PyQt5.QtWidgets import (
     QApplication,
@@ -26,11 +25,12 @@ from statistics.structure import Statistics_widget
 from chart.structure import Chart_widget
 from db.connection import database
 #______________________________________________________________________________________________________________________
+from ResourcePath.Structure import ResourcePath
 
 class app_controller(QWidget):
     def __init__(self):
         super().__init__()
-        self.main_path = str(pathlib.Path(__file__).resolve().parents[2])
+        self.main_path = ResourcePath(2)
         self.setObjectName('window')
         self.layout = QVBoxLayout(self)
         self.layout.setSpacing(0)
@@ -241,7 +241,8 @@ class app_controller(QWidget):
 #______________________________________________________________________________________________________________________
 
 def set_font():
-    font_id = QFontDatabase.addApplicationFont(str(pathlib.Path(__file__).resolve().parents[3])+'/TickerK8_app/APP_FILES/STYLE/FONTS/NotoSerif-VariableFont_wdth,wght.ttf')
+    print(ResourcePath(3))
+    font_id = QFontDatabase.addApplicationFont(str(ResourcePath(3)+'/APP_FILES/STYLE/FONTS/NotoSerif-VariableFont_wdth,wght.ttf'))
     font_families = QFontDatabase.applicationFontFamilies(font_id) 
     return QFont(font_families[0])
 #______________________________________________________________________________________________________________________

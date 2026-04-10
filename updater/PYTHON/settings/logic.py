@@ -1,7 +1,6 @@
 """ Import packages"""
 import json 
 import hashlib
-import pathlib
 import urllib.request
 """ Import PyQt5 packages """
 from PyQt5.QtCore import (
