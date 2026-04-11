@@ -1,0 +1,98 @@
+#chart_widget{
+    background-color: #252525;
+}
+#top_widget{
+    background-color: #1e1e1e;
+}
+#top_exit_button{
+    color: #FAFAFA;
+    background-color: #252525;
+    border: 0;
+    border-radius: 17px;
+    padding: 0.3em;
+    font-size: 14px;
+}
+#top_exit_button:hover{
+    background-color: #031913;
+}
+#top_title_label{
+    color: #FAFAFA;
+    border: 0;
+    padding: 0.3em;
+    font-size: 32px;
+}
+#bottom_widget{
+    background-color: #1e1e1e;
+}
+.bottom_button{
+    color: #FAFAFA;
+    background-color: #1e1e1e;
+    border: 0;
+    padding: 0.3em;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5em;
+}
+.bottom_button:hover{
+    background-color: #031913;
+}
+
+#settings_background_widget{
+    background-color: #60000000;
+}
+#settings_widget{
+    background-color: #1b1b1b;
+}
+#settings_title_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    border: 0;
+    padding: 1em;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#settings_tab_widget{
+    background-color: #00000000;
+    border: #00000000;
+}
+.settings_sub_widget{
+    background-color: #00000000;
+}
+.settings_label{
+    color: #FAFAFA;
+    background-color: #00000000;
+    border: 0;
+    padding: 1em;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.settings_line{
+    color: #FAFAFA;
+    background-color: #252525;
+    border: 0;
+    padding: 1em;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#settings_theme_combo{
+    background-color: #252525;
+    border: 0;
+}
+#settings_background_net_type_combo{
+    background-color: #252525;
+    border: 0;
+}
+#settings_exit_button{
+    color: #FAFAFA;
+    background-color: #252525;
+    border: 0;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    font-size: 14px;
+}
+#settings_exit_button:hover{
+    background-color: #031913;
+}

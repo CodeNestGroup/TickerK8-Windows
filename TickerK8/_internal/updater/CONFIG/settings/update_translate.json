@@ -1,0 +1,9 @@
+{
+    "title_label": ["Update", "Aktualizacja"],
+    "version_heading1_label": ["Version", "Wersja"],
+    "version_desc_label": ["Description:", "Opis:"],
+    "version_changelog_label": ["Change log:", "Dziennik zmian:"],
+    "version_changelog_button": ["Open", "Otwórz"],
+    "advanced_heading1_label": ["Advanced", "Zaawansowane"],
+    "advanced_capacity_label": ["Capacity:", "Przepustowość:"]
+}

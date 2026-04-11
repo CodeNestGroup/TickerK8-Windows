@@ -1,0 +1,8 @@
+{
+    "NaviUserB": ["User", "Użytkownik"],
+    "NaviStyleB": ["Style", "Wygląd"],
+    "NaviSoundB": ["Sound", "Dźwięk"],
+    "NaviUpdateB": ["Update", "Aktualizacja"],
+    "NaviLanguageB": ["Language", "Język"],
+    "NaviExitB": ["Save & exit", "Zapisz i wyjdź"]
+}

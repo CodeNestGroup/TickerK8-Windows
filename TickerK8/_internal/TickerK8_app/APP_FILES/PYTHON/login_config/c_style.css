@@ -1,0 +1,188 @@
+#Login_configuration_widget{
+    background-color: #1f1f1f;
+    border: 0;
+}
+#title_label{
+    color: #c3c3c3;
+    background-color: #00000000;
+    font-size: 24px;
+    font-weight:600;
+    letter-spacing: 0.3em;
+}
+#info_label{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+.navi_button{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+.navi_button:hover{
+    background-color: #282828;
+}
+.subtitle{
+    color: #c3c3c3;
+    background-color: #00000000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.list{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    margin: 2em 1em 2em 1em;
+    padding: 1em;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.list:hover{
+    background-color: #282828;
+}
+.list QAbstractItemView{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+}
+.list::drop-down{
+    border: 0;
+    background-color: #282828;
+}
+.sub_button{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.sub_button:hover{
+    background-color: #282828;
+}
+.search{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    border-radius: 15px;
+    padding: 0.5em;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.scroll{
+    background-color: #1f1f1f;
+    border: 0;
+}
+.scroll QScrollBar:vertical{
+    border: none;
+    background: #1a1a1a;
+    width: 8px;
+    margin: 0;
+}
+.scroll QScrollBar::handle:vertical{
+    background: #353535;
+    min-height: 15px;
+    border-radius: 2px;
+}
+.scroll QScrollBar::handle:vertical:hover{
+    background-color: #282828;
+}
+.scroll QScrollBar::add-line:vertical .scroll QScrollBar::sub-line:vertical{
+    border: none;
+    background: none;
+}
+
+.scroll QScrollBar::add-page:vertical .scroll QScrollBar::sub-page:vertical{
+    background: none;
+}
+.widget{
+    background-color: #00000000;
+    border: 0;
+}
+.number{
+    color: #c3c3c3;
+    background-color: #00000000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.icon{
+    background-color: #00000000;
+}
+.ticker{
+    color: #c3c3c3;
+    background-color: #00000000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.name{
+    color: #c3c3c3;
+    background-color: #00000000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.controll_button{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    margin: 2em 1em 2em 1em;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.controll_button:hover{
+    background-color: #282828;
+}
+.error{
+    color: #c3c3c3;
+    background-color: #00000000;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}
+#regulations_scroll{
+    background-color: #1f1f1f;
+    border: 0;
+}
+#regulations_scroll QScrollBar:vertical{
+    border: none;
+    background: #1a1a1a;
+    width: 8px;
+    margin: 0;
+}
+#regulations_scroll QScrollBar::handle:vertical{
+    background: #353535;
+    min-height: 15px;
+    border-radius: 2px;
+}
+#regulations_scroll QScrollBar::handle:vertical:hover{
+    background-color: #282828;
+}
+#regulations_scroll QScrollBar::add-line:vertical #regulations_scroll QScrollBar::sub-line:vertical{
+    border: none;
+    background: none;
+}
+
+#regulations_scroll QScrollBar::add-page:vertical #regulations_scroll QScrollBar::sub-page:vertical{
+    background: none;
+}
+
+#regulations_widget{
+    background-color: #00000000;
+    border: 0;
+}
+#regulations_label{
+    color: #c3c3c3;
+    background-color: #00000000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}

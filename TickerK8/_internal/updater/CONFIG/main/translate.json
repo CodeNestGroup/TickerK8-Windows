@@ -1,0 +1,15 @@
+{
+    "info_label": [
+        ["Connection lost", "Brak połączenia"],
+        ["Checking", "Sprawdzanie"],
+        ["Creating backup", "Tworzenie kopii zapasowej"],
+        ["Downloading","Pobieranie"],
+        ["Unpacking", "Rozpakowywanie"],
+        ["Checking compatibility", "Sprawdzanie kontatybilności"],
+        ["Installing", "Instalowanie"],
+        ["Deleting backup", "Usuwanie kopii zapasowej"],
+        ["Update failed", "Błąd aktualizacji"]
+    ],
+    "download_button": ["Download", "Pobierz"],
+    "open_button": ["Open", "Otwórz"]
+}

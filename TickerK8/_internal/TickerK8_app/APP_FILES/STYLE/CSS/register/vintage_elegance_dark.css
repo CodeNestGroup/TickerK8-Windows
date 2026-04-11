@@ -1,0 +1,63 @@
+#register_widget{
+    background-color: #1f1f1f;
+}
+#register_password_requirements_label{
+    color: #c3c3c3;
+    padding: 0.3em;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}
+.register_sub_title{
+    color: #c3c3c3;
+    padding: 0.3em;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}
+.register_input_line{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    border-radius: 15px;
+    padding: 0.5em;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+.register_drop_down_list{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+}
+.register_password_show_button{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border: 0;
+    padding: 0.3em;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}
+.register_password_show_button:hover{
+    background-color: #282828;
+}
+.register_button{
+    color: #c3c3c3;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 0.5em;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.register_button:hover{
+    background-color: #282828;
+}
+.register_label{
+    color: #c3c3c3;
+    padding: 0.3em;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+}

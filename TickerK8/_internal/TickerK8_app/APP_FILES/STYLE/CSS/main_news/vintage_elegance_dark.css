@@ -1,0 +1,114 @@
+#main_news_widget{
+    background-color: #60000000;
+}
+#panel_widget{
+    background-color: #1a1a1a;
+}
+#news_scroll{
+    background-color: #1a1a1a;
+    border: 0;
+}
+#news_scroll QScrollBar:vertical{
+    border: none;
+    background: #1a1a1a;
+    width: 8px;
+    margin: 0;
+}
+#news_scroll QScrollBar::handle:vertical {
+    background: #353535;
+    min-height: 15px;
+    border-radius: 2px;
+}
+
+#news_scroll QScrollBar::handle:vertical:hover {
+    background: #282828;
+}
+
+#news_scroll QScrollBar::add-line:vertical, #news_scroll QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}
+
+#news_scroll QScrollBar::add-page:vertical, #news_scroll QScrollBar::sub-page:vertical {
+    background: none;
+}
+#panel_exit_button{
+    color: #c3c3c3;
+    background-color: #1e1e1e;
+    border: 0;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    font-size: 14px;
+}
+#panel_exit_button:hover{
+    background-color: #282828;
+}
+#news_widget{
+    background-color: #1a1a1a;
+}
+#news_photo_label{
+    background-color: #00000000;
+}
+#news_title_label{
+    color: #c3c3c3;
+    background-color: #00000000;
+    border: 0;
+    padding: 1em;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+#news_date_label{
+    color: #c3c3c3;
+    background-color: #00000000;
+    border: 0;
+    padding: 1em;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.news_div_widget{
+    background-color: #00000000;
+}
+#news_source_title_label{
+    color: #c3c3c3;
+    background-color: #00000000;
+    border: 0;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.source_button{
+    color: #c3c3c3;
+    background-color: #1e1e1e;
+    margin: 0.5em;
+    border: 0;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    font-size: 12px;
+}
+.source_button:hover{
+    background-color: #282828;
+}
+#news_hash_title_label{
+    color: #c3c3c3;
+    background-color: #00000000;
+    border: 0;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+}
+.hash_button{
+    color: #c3c3c3;
+    background-color: #1e1e1e;
+    margin: 0.5em;
+    border: 0;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    font-size: 12px;
+}
+.hash_button:hover{
+    background-color: #282828;
+}

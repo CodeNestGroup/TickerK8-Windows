@@ -1,0 +1,43 @@
+#ListObjectW{
+    border-color: #1a1a1a;
+    background-color: #1a1a1a;
+}
+#NullDataL{
+    background-color: #1a1a1a;
+}
+#NameL{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+#DataS{
+    background-color: #1a1a1a;
+}
+#DataW{
+    background-color: #00000000;
+}
+.SectionNameL{
+    color: #c3c3c3;
+    border-color: #1d1d1d;
+    background-color: #1d1d1d;
+}
+.IndexL{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+.IconL{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+.TickerB{
+    color: #c3c3c3;
+    border-color: #282828;
+    background-color: #282828;
+}
+.TickerB:hover{
+    border-color: #1a1a1a;
+    background-color: #1a1a1a;
+}
+.NameL{
+    color: #c3c3c3;
+    background-color: #00000000;
+}

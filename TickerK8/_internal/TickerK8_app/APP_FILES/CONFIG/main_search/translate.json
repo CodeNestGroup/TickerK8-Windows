@@ -1,0 +1,13 @@
+{
+    "panel_search_lineedit": ["Search...", "Szukaj..."],
+    "panel_type_stock_button": ["Stock", "Akcja"],
+    "panel_type_etf_button": ["Etf", "Etf"],
+    "panel_type_forex_button": ["Forex", "Forex"],
+    "panel_type_index_button": ["Index", "Indeks"],
+    "panel_type_market_button": ["Market", "Rynek"],
+    "panel_type_country_button": ["Country", "Kraj"],
+    "panel_object_name_label": ["Name", "Nazwa"],
+    "panel_market_name_label": ["Market", "Rynek"],
+    "panel_add_title_label": ["Add", "Dodaj"],
+    "panel_add_path_label": ["Lists", "Listy"]
+}
