@@ -6,6 +6,6 @@ def ResourcePath(i:int) -> str:
         b = Path(sys._MEIPASS)
     else:
         b = Path(__file__).resolve()
-    for _ in range(i+1):
-        b = b.parent
+        for _ in range(i):
+            b = b.parent
     return str(b)
