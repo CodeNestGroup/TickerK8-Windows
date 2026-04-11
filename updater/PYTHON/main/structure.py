@@ -25,7 +25,7 @@ class Main_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """" Set paths, file name """
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(4)
         self.last_ping = False
         self.info_label = None
         self.download_button = None

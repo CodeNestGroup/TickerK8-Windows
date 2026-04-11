@@ -20,7 +20,7 @@ class Main_chart(QGraphicsView):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """ Set paths, file name"""
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(5)
         self.chart_data = data
         self.main_scence = QGraphicsScene(self)
         """ Call functions """

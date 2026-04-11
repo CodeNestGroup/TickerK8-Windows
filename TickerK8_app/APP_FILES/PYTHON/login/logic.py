@@ -73,7 +73,7 @@ def login_widget_background_painter(self):
     self.setPalette(palette)
     """ Call text and icon change """
     if self.index_changed != _index:
-        _icon = f'{self.main_path}/STYLE/IMG/icons/login/{_icons[_index]}.svg'
+        _icon = f'{self.main_path}/TickerK8_app/APP_FILES/STYLE/IMG/icons/login/{_icons[_index]}.svg'
         change_text_icon(self, _texts_title[_index][_language], _texts_sub[_index][_language], _icon)
         self.index_changed = _index
 #______________________________________________________________________________________________________________________

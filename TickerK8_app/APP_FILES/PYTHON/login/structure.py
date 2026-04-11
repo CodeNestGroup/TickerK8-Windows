@@ -24,10 +24,10 @@ class Login_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """ Set paths, file name"""
-        self.main_path = ResourcePath(2)
-        self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
-        self.login_translate = json.load(open(self.main_path+'/CONFIG/login/translate.json', 'r', encoding='utf-8'))
-        self.login_conf = json.load(open(self.main_path+'/CONFIG/login/background_conf.json', 'r', encoding='utf-8'))
+        self.main_path = ResourcePath(5)
+        self.global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+        self.login_translate = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/login/translate.json', 'r', encoding='utf-8'))
+        self.login_conf = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/login/background_conf.json', 'r', encoding='utf-8'))
         self.index_changed = -10
         """ Create objects """
         self.login_layout = QGridLayout(self)

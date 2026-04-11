@@ -57,7 +57,7 @@ def login_ui(self):
 #______________________________________________________________________________________________________________________
 
 def login_reload_style(self):
-    self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/login/vintage_elegance_dark.css')).read())
+    self.setStyleSheet(open(str(self.main_path+'/TickerK8_app/APP_FILES/STYLE/CSS/login/vintage_elegance_dark.css')).read())
 #______________________________________________________________________________________________________________________
 
 def login_retranslate(self):

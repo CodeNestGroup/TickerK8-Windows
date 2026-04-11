@@ -21,9 +21,9 @@ class Changelog_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """" Set paths, file name """
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(3)
         if data == '':
-            data = json.load(open(self.main_path+'/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))
+            data = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))
         self.changelog_data = data
         """ Create objects """
         self.layout = QGridLayout(self)

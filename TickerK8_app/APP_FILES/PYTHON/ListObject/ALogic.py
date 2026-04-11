@@ -9,7 +9,7 @@ from PyQt5.QtCore import (
 )
 
 def SetupData(self, MainSelf):
-    conn = sqlite3.connect(f'{self.Path}/APP_FILES/CONFIG/GLOBAL/tickerk8_offline.db')
+    conn = sqlite3.connect(f'{self.Path}/TickerK8_app/APP_FILES/CONFIG/GLOBAL/tickerk8_offline.db')
     cur = conn.cursor()
     b = None
     for ListName, ListItems in self.ObjectList.items():

@@ -24,7 +24,7 @@ from .candle_chart import Candle_chart
 def create_chart(self):
     """ Get data """
     chart_object = self.global_config['mid_object']
-    chart_data = list(json.load(open(self.main_path+'/test_chart_data/AGX100/agx100_1min.json', 'r', encoding='utf-8')))
+    chart_data = list(json.load(open(self.main_path+'/TickerK8_app/APP_FILES/test_chart_data/AGX100/agx100_1min.json', 'r', encoding='utf-8')))
     _background_config = self.background_config # Get background config
     _chart_config = self.chart_config # Get chart config
 #______________________________________________________________________________________________________________________

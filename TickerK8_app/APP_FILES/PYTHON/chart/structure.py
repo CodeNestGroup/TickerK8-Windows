@@ -33,7 +33,7 @@ class Chart_widget(QWidget):
         self.main_news_list = None # Set dafoult
 #______________________________________________________________________________________________________________________
         """ Set paths, file name"""
-        self.main_path = ResourcePath(2) # Set main path, path to TickerK8 folder.
+        self.main_path = ResourcePath(3) # Set main path, path to TickerK8 folder.
         self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8')) # Get global config data
         self.main_config = json.load(open(self.main_path+'/CONFIG/chart/main.json', 'r', encoding='utf-8')) # Get main config data
         self.chart_translate = json.load(open(self.main_path+'/CONFIG/chart/translate.json', 'r', encoding='utf-8')) # Get main translate data

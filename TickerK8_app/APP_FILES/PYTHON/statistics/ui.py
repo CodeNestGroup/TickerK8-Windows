@@ -69,9 +69,9 @@ def statistics_ui(self):
 #######################################################################################################################
 """ Statistics reload style """
 def statistics_reload_style(self):
-    self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/statistics/'+self.global_config['__theme__']+'.css')).read())
-    self.main_exit_button.setIcon(QIcon(load_svg(self.main_path+'/STYLE/IMG/icons/main/exit_'+self.global_config['__theme__']+'.svg', 256, 256)))
-    self.main_close_button.setIcon(QIcon(load_svg(self.main_path+'/STYLE/IMG/icons/main/exit_'+self.global_config['__theme__']+'.svg', 256, 256)))
+    self.setStyleSheet(open(str(self.main_path+'/TickerK8_app/APP_FILES/STYLE/CSS/statistics/'+self.global_config['__theme__']+'.css')).read())
+    self.main_exit_button.setIcon(QIcon(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/icons/main/exit_'+self.global_config['__theme__']+'.svg', 256, 256)))
+    self.main_close_button.setIcon(QIcon(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/icons/main/exit_'+self.global_config['__theme__']+'.svg', 256, 256)))
 #######################################################################################################################
 """ Statistics retranslate """
 def statistics_retranslate(self):

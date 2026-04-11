@@ -58,16 +58,16 @@ def main_ui(self):
     self.discord_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def main_reload_style(self):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     t = g['theme']
-    self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/main/'+t+'.css')).read())
-    self.settings_button.setIcon(QIcon(load_svg(str(self.main_path+'/STYLE/IMG/icons/main/settings_vintage_elegance_d.svg'), 256, 256)))
+    self.setStyleSheet(open(str(self.main_path+'/updater/STYLE/CSS/main/'+t+'.css')).read())
+    self.settings_button.setIcon(QIcon(load_svg(str(self.main_path+'/updater/STYLE/IMG/icons/main/settings_vintage_elegance_d.svg'), 256, 256)))
     self.settings_button.setIconSize(self.settings_button.size())
-    self.instagram_button.setIcon(QIcon(load_svg(str(self.main_path+'/STYLE/IMG/icons/main/instagram_vintage_elegance_d.svg'), 256, 256)))
+    self.instagram_button.setIcon(QIcon(load_svg(str(self.main_path+'/updater/STYLE/IMG/icons/main/instagram_vintage_elegance_d.svg'), 256, 256)))
     self.instagram_button.setIconSize(self.instagram_button.size())
-    self.github_button.setIcon(QIcon(load_svg(str(self.main_path+'/STYLE/IMG/icons/main/github_vintage_elegance_d.svg'), 256, 256)))
+    self.github_button.setIcon(QIcon(load_svg(str(self.main_path+'/updater/STYLE/IMG/icons/main/github_vintage_elegance_d.svg'), 256, 256)))
     self.github_button.setIconSize(self.github_button.size())
-    self.discord_button.setIcon(QIcon(load_svg(str(self.main_path+'/STYLE/IMG/icons/main/discord_vintage_elegance_d.svg'), 256, 256)))
+    self.discord_button.setIcon(QIcon(load_svg(str(self.main_path+'/updater/STYLE/IMG/icons/main/discord_vintage_elegance_d.svg'), 256, 256)))
     self.discord_button.setIconSize(self.discord_button.size())
 #______________________________________________________________________________________________________________________
 
@@ -91,8 +91,8 @@ def main_no_connect_ui(self):
     self.info_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     
 def main_no_connect_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    t = json.load(open(self.main_path+'/updater/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.info_label.setText(t['info_label'][0][l])
 #______________________________________________________________________________________________________________________
 
@@ -116,8 +116,8 @@ def main_connect_ui(self):
     self.info_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def main_connect_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    t = json.load(open(self.main_path+'/updater/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.info_label.setText(t['info_label'][1][l])
 #______________________________________________________________________________________________________________________
 
@@ -138,8 +138,8 @@ def none_update_ui(self):
     self.open_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def none_update_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    t = json.load(open(self.main_path+'/updater/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.open_button.setText(t['open_button'][l])
 #______________________________________________________________________________________________________________________
 
@@ -160,8 +160,8 @@ def new_update_ui(self):
     self.download_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def new_update_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    t = json.load(open(self.main_path+'/updater/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.download_button.setText(t['download_button'][l])
 #______________________________________________________________________________________________________________________
 
@@ -182,8 +182,8 @@ def start_update_ui(self):
     self.info_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def start_update_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/main/translate.json', 'r', encoding='utf-8'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    t = json.load(open(self.main_path+'/updater/CONFIG/main/translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.info_label.setText(t['info_label'][2][l])
 #______________________________________________________________________________________________________________________
 

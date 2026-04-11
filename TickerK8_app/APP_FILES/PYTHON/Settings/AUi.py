@@ -61,12 +61,12 @@ def SettingsUi(self):
 
 def SettingsReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/Settings/BMain.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/Settings/B{self.Theme}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Settings/BMain.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Settings/B{self.Theme}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
 
 def SettingsRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Settings/CNaviRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Settings/CNaviRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.NaviUserB.setText(t['NaviUserB'][l])
     self.NaviStyleB.setText(t['NaviStyleB'][l])
@@ -144,7 +144,7 @@ def UserUi(self):
     self.UserCreateDateValueL.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def UserRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Settings/CUserPageRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Settings/CUserPageRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     d = self.UserData
     self.PanelTitleL.setText(t['PanelTitleL'][l])
@@ -197,7 +197,7 @@ def StyleUi(self):
     self.StyleThemeThemesValueC.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     
 def StyleRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Settings/CStylePageRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Settings/CStylePageRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     if self.Theme == 'vintage_elegance_light':
         i = 0
@@ -262,8 +262,8 @@ def UpdateUi(self):
     self.UpdateChangelogValueLA.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def UpdateRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Settings/CUpdatePageRetranslate.json', 'r', encoding='utf-8'))
-    p = ResourcePath(4)
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Settings/CUpdatePageRetranslate.json', 'r', encoding='utf-8'))
+    p = ResourcePath(5)
     u = json.load(open(p+'/updater/CONFIG/GLOBAL/changelog.json', 'r'))
     l = self.Language
     self.PanelTitleL.setText(t['PanelTitleL'][l])
@@ -300,7 +300,7 @@ def LanguageUi(self):
     self.LanguageValueC.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def LanguageRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Settings/CLanguagePageRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Settings/CLanguagePageRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.PanelTitleL.setText(t['PanelTitleL'][l])
     self.LanguageNameL.setText(t['LanguageNameL'][l]+':')

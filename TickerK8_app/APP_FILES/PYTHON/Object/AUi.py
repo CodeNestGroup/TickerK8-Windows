@@ -73,12 +73,12 @@ def ObjectUi(self):
 
 def ObjectReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/Object/BMain.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/Object/B{t}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Object/BMain.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Object/B{t}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
 
 def ObjectRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Object/CMainObject.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Object/CMainObject.json', 'r', encoding='utf-8'))
     l = self.Language
     self.InfoTitleL.setText(t['InfoTitleL'][l])
     self.InfoNameNameL.setText(t['InfoNameNameL'][l])

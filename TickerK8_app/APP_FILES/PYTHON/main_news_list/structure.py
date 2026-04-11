@@ -29,7 +29,7 @@ class Main_news_list_widget(QWidget):
         self.parent = parent
         self.news_type = news_type
         """ Set paths, file name"""
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(5)
         """ Create objects """
         self.main_layout = QGridLayout(self) 
         self.panel_widget = QWidget(self)

@@ -93,7 +93,7 @@ def recover_password_ui(self):
 #######################################################################################################################
 """ Recover password style """
 def recover_password_style(self):
-    self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/RECOVER_PASSWORD/'+self.global_config['__theme__']+'.css')).read())
+    self.setStyleSheet(open(str(self.main_path+'/TickerK8_app/APP_FILES/STYLE/CSS/RECOVER_PASSWORD/'+self.global_config['__theme__']+'.css')).read())
 #######################################################################################################################
 """ Recover password retranslate """
 def recover_password_translate(self):

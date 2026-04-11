@@ -19,7 +19,7 @@ from .ui import (
 
 def change_d_n(self):
     """ Change config """
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     t = g['theme'][:-1]
     i = g['theme_index']
     if i%2:
@@ -30,7 +30,7 @@ def change_d_n(self):
         i += 1
     g['theme'] = t
     g['theme_index'] = i
-    json.dump(g, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
+    json.dump(g, open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
     """ Reload """
     settings_reload_style(self)
     theme_retranslate(self)
@@ -38,7 +38,7 @@ def change_d_n(self):
 #______________________________________________________________________________________________________________________
 
 def change_theme(self):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     i = int(self.list_combobox.currentIndex())
     if i == 0:
         t = 'vintage_elegance_l'
@@ -46,30 +46,30 @@ def change_theme(self):
         t = 'vintage_elegance_d'
     g['theme'] = t
     g['theme_index'] = i
-    json.dump(g, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
+    json.dump(g, open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
     """ Reload """
     settings_reload_style(self)
     theme_retranslate(self)
 #______________________________________________________________________________________________________________________
 
 def change_sound_d_e(self, t):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     g['sound'][t] = not g['sound'][t]
-    json.dump(g, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
+    json.dump(g, open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
     """ Reload """
     sound_retranslate(self)
 #______________________________________________________________________________________________________________________
 
 def change_capacity(self):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     g['capacity'] = self.advanced_capacity_combobox.currentIndex()
-    json.dump(g, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
+    json.dump(g, open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
 #______________________________________________________________________________________________________________________
 
 def change_language(self):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     g['language'] = self.type_combobox.currentIndex()
-    json.dump(g, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
+    json.dump(g, open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
     """ Reload """
     settings_retranslate(self)
     language_retranslate(self)

@@ -22,7 +22,7 @@ def NewsListUi(self):
     self.ListW.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def NewsListReloadStyle(self):
-    m = open(f'{self.Path}/APP_FILES/PYTHON/NewsList/BNewsList.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/NewsList/BNewsList{self.Theme}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/NewsList/BNewsList.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/NewsList/BNewsList{self.Theme}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
     

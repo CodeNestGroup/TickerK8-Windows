@@ -26,7 +26,7 @@ class Register_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """ Set paths, file name"""
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(5)
         """ Create objects """
         self.register_layout = QGridLayout(self)
         self.register_name_subtitle_label = QLabel(self)

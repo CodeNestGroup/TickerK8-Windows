@@ -127,7 +127,7 @@ class app_controller(QWidget):
 #______________________________________________________________________________________________________________________
 
 def set_font():
-    font_id = QFontDatabase.addApplicationFont(str(ResourcePath(3)+'/updater/STYLE/FONTS/NotoSerif-VariableFont_wdth,wght.ttf'))
+    font_id = QFontDatabase.addApplicationFont(str(ResourcePath(4)+'/updater/STYLE/FONTS/NotoSerif-VariableFont_wdth,wght.ttf'))
     font_families = QFontDatabase.applicationFontFamilies(font_id) 
     return QFont(font_families[0])
 #______________________________________________________________________________________________________________________

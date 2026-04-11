@@ -66,14 +66,14 @@ def settings_ui(self):
     self.exit_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def settings_reload_style(self):
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     t = g['theme']
-    self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/settings/'+t+'.css')).read())
-    self.exit_button.setIcon(QIcon(load_svg(str(self.main_path+'/STYLE/IMG/icons/settings/exit_vintage_elegance_d.svg'), 256, 256)))
+    self.setStyleSheet(open(str(self.main_path+'/updater/STYLE/CSS/settings/'+t+'.css')).read())
+    self.exit_button.setIcon(QIcon(load_svg(str(self.main_path+'/updater/STYLE/IMG/icons/settings/exit_vintage_elegance_d.svg'), 256, 256)))
 
 def settings_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/settings/menu_translate.json', 'r', encoding='utf-8'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    t = json.load(open(self.main_path+'/updater/CONFIG/settings/menu_translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.menu_theme_button.setText(t['menu_theme_button'][l])
     self.menu_sound_button.setText(t['menu_sound_button'][l])
     self.menu_update_button.setText(t['menu_update_button'][l])
@@ -135,8 +135,8 @@ def theme_ui(self):
     self.list_combobox.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def theme_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/settings/theme_translate.json', 'r', encoding='utf-8'))
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    t = json.load(open(self.main_path+'/updater/CONFIG/settings/theme_translate.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     l = g['language']
     d = g['theme_index']
     self.title_label.setText(t['title_label'][l])
@@ -165,8 +165,8 @@ def sound_ui(self):
     self.button_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def sound_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/settings/sound_translate.json', 'r', encoding='utf-8'))
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    t = json.load(open(self.main_path+'/updater/CONFIG/settings/sound_translate.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     l = g['language']
     s = g['sound']
     self.title_label.setText(t['title_label'][l])
@@ -227,9 +227,9 @@ def update_ui(self):
     self.advanced_capacity_combobox.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def update_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/settings/update_translate.json', 'r', encoding='utf-8'))
-    g = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
-    d = json.load(open(self.main_path+'/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))['name']
+    t = json.load(open(self.main_path+'/updater/CONFIG/settings/update_translate.json', 'r', encoding='utf-8'))
+    g = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    d = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))['name']
     l = g['language']
     c = g['capacity']
     self.title_label.setText(t['title_label'][l])
@@ -262,8 +262,8 @@ def language_ui(self):
     self.type_combobox.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
 def language_retranslate(self):
-    t = json.load(open(self.main_path+'/CONFIG/settings/language_translate.json', 'r', encoding='utf-8'))
-    l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    t = json.load(open(self.main_path+'/updater/CONFIG/settings/language_translate.json', 'r', encoding='utf-8'))
+    l = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.title_label.setText(t['title_label'][l])
     self.type_label.setText(t['type_label'][l])
     self.type_combobox.setCurrentIndex(l)

@@ -33,8 +33,8 @@ class Candle_chart(QGraphicsScene):
         super().__init__(parent)
 #______________________________________________________________________________________________________________________
         """ Get data """
-        self.main_path = ResourcePath(2) # Set main path, path to TickerK8 folder.
-        self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', encoding='utf-8')) # Get global config.
+        self.main_path = ResourcePath(5) # Set main path, path to TickerK8 folder.
+        self.global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', encoding='utf-8')) # Get global config.
         self.data = data # Data for creating chart 
 #______________________________________________________________________________________________________________________
         """ Set dafoult """

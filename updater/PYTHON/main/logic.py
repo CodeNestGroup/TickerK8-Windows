@@ -37,7 +37,6 @@ from .ui import (
     start_update_ui,
     start_update_retranslate
 )
-from ResourcePath.Structure import ResourcePath
 #______________________________________________________________________________________________________________________
 from ResourcePath.Structure import ResourcePath
 
@@ -97,7 +96,7 @@ class get_releases(QThread):
 
 def check_update(self, release_data):
     g_v = release_data[0]['published_at']
-    l_v = json.load(open(self.main_path+'/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))['published_at']
+    l_v = json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/changelog.json', 'r', encoding='utf-8'))['published_at']
     g_t = datetime.fromisoformat(g_v.replace("Z", "+00:00"))
     l_t = datetime.fromisoformat(l_v.replace("Z", "+00:00"))
     if g_t <= l_t:
@@ -114,7 +113,7 @@ def none_update(self):
 
 def open_main_app(self):
     try:
-        subprocess.Popen(["python", ResourcePath(3)+"/TickerK8_app/APP_FILES/PYTHON/__core__.py"])
+        subprocess.Popen(["python", ResourcePath(4)+"/TickerK8_app/APP_FILES/PYTHON/__core__.py"])
         sys.exit(0)
     except:
         pass
@@ -151,8 +150,8 @@ class controller_download(QThread):
     Init, creating items, set base variables like paths, screen size, etc. """
     def __init__(self):
         super().__init__()
-        self.backup_path = ResourcePath(4)
-        self.main_path = ResourcePath(3)
+        self.backup_path = ResourcePath(5)
+        self.main_path = ResourcePath(4)
         self.capacity = self.set_speed(json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['capacity'])
         self.update_folder = None
         self.update_json_file_list = None

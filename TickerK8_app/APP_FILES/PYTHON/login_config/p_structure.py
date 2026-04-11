@@ -25,7 +25,7 @@ class Login_configuration_widget(QWidget):
         super().__init__()
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(5)
         self.widget_list = [None, self.app_conf, None, self.sub_conf, None, self.accept_settings]
         self.widget_list_index = 0
         ResetConfig(self)

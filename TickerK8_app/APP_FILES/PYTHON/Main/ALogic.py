@@ -102,7 +102,7 @@ def SetupObject(self, d):
     self.OpenedL.addWidget(self.ObjectStatsW, 0, 58, 100, 41)
 
 def ListAddSetupList(self):
-    conn = sqlite3.connect(f'{self.Path}/APP_FILES/CONFIG/GLOBAL/tickerk8_offline.db')
+    conn = sqlite3.connect(f'{self.Path}/TickerK8_app/APP_FILES/CONFIG/GLOBAL/tickerk8_offline.db')
     cur = conn.cursor()
     for ListName, ListItems in self.ObjectList.items():
         self.NameL.setText(ListName)
@@ -162,7 +162,7 @@ def SortTypeChange(self, t):
     SetupResultS(self)
 
 def SetupResultS(self):
-    conn = sqlite3.connect(f'{self.Path}/APP_FILES/CONFIG/GLOBAL/tickerk8_offline.db')
+    conn = sqlite3.connect(f'{self.Path}/TickerK8_app/APP_FILES/CONFIG/GLOBAL/tickerk8_offline.db')
     cur = conn.cursor()
     cur.execute(f'SELECT id, name FROM {self.SortType} WHERE name like "%{self.SearchE.text()}%";')
     data = cur.fetchall()

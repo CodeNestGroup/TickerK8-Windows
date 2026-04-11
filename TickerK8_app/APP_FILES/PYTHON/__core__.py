@@ -30,7 +30,7 @@ from ResourcePath.Structure import ResourcePath
 class app_controller(QWidget):
     def __init__(self):
         super().__init__()
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(5)
         self.setObjectName('window')
         self.layout = QVBoxLayout(self)
         self.layout.setSpacing(0)
@@ -241,8 +241,7 @@ class app_controller(QWidget):
 #______________________________________________________________________________________________________________________
 
 def set_font():
-    print(ResourcePath(3))
-    font_id = QFontDatabase.addApplicationFont(str(ResourcePath(3)+'/APP_FILES/STYLE/FONTS/NotoSerif-VariableFont_wdth,wght.ttf'))
+    font_id = QFontDatabase.addApplicationFont(str(ResourcePath(4)+'/APP_FILES/STYLE/FONTS/NotoSerif-VariableFont_wdth,wght.ttf'))
     font_families = QFontDatabase.applicationFontFamilies(font_id) 
     return QFont(font_families[0])
 #______________________________________________________________________________________________________________________

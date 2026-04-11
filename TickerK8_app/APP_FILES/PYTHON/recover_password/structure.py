@@ -27,9 +27,9 @@ class Recover_password_widget(QWidget):
         self.setParent(parent) # Set parent
 #______________________________________________________________________________________________________________________
         """ Set paths, file name"""
-        self.main_path = ResourcePath(2) # Set main path, path to TickerK8 folder.
-        self.global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8')) # Get global config data
-        self.recover_password_translate = json.load(open(self.main_path+'/CONFIG/recover_password/translate.json', 'r', encoding='utf-8')) # Get global translate data
+        self.main_path = ResourcePath(5) # Set main path, path to TickerK8 folder.
+        self.global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8')) # Get global config data
+        self.recover_password_translate = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/recover_password/translate.json', 'r', encoding='utf-8')) # Get global translate data
 #______________________________________________________________________________________________________________________
         """ Create objects """
         self.recover_password_layout = QGridLayout(self)

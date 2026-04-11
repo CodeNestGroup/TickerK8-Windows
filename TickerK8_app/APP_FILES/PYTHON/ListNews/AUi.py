@@ -26,7 +26,7 @@ def ListNewsUi(self):
 
 def ListNewsReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/ListNews/BMain.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/ListNews/B{t}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/ListNews/BMain.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/ListNews/B{t}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
     

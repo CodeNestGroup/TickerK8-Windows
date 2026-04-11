@@ -25,7 +25,7 @@ class Changelog_widget(QWidget):
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.setParent(parent)
         """ Set paths, file name """
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(4)
         """ Create objects """
         self.release_data = []
         self.releases_button_list = []

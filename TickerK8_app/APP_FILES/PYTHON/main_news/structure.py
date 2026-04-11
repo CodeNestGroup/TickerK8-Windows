@@ -26,7 +26,7 @@ class Main_news_widget(QWidget):
         self.setParent(parent)
         self.parent = parent
         """ Set paths, file name"""
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(5)
         """ Create objects """
         self.main_layout = QGridLayout(self)
         self.panel_widget = QWidget(self)

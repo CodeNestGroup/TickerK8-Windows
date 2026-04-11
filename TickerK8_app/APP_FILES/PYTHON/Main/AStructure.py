@@ -32,7 +32,7 @@ class MainW(QWidget):
         self.LoggedUserId = parent.logged_user_id
         ReloadConfig(self)
         self.setAttribute(Qt.WA_StyledBackground, True)
-        self.BacgroundConf = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Main/CBackgroundConf.json', 'r', encoding='utf-8'))
+        self.BacgroundConf = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/CBackgroundConf.json', 'r', encoding='utf-8'))
 #           --- Create objects ---
         self.Layout = QGridLayout(self)
         self.NavW = QWidget(self)

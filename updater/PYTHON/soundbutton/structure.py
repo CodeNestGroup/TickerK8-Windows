@@ -15,7 +15,7 @@ class QPushButton_sound(QPushButton):
         super().__init__()
         self.setParent(parent)
         """" Set paths, file name """
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(4)
         self.clicked.connect(self.click_sound) 
 
     def enterEvent(self, event):
@@ -39,5 +39,5 @@ class QPushButton_sound(QPushButton):
             print('click')
 
     def check_config(self):
-        return json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['sound']['button']
+        return json.load(open(self.main_path+'/updater/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['sound']['button']
 #______________________________________________________________________________________________________________________

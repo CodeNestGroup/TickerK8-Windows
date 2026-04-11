@@ -10,13 +10,13 @@ class database():
     def __init__(self):
         super().__init__()
         self.user_dict = {}
-        self.main_path = ResourcePath(2)
+        self.main_path = ResourcePath(5)
         self.conn = self.Connect_offline_database()
 
 # --- Offline database ---
     def Connect_offline_database(self):
         c = sqlite3.connect(
-            database=self.main_path+'/CONFIG/GLOBAL/tickerk8_offline.db'
+            database=self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/tickerk8_offline.db'
         )
         return c
 
@@ -31,7 +31,7 @@ class database():
 # --- Online database ---
     def ConnectData(self) -> dict:
         try:
-            conf = json.load(open(f'{self.main_path}/PYTHON/db/conf.json', 'r', encoding='utf-8'))
+            conf = json.load(open(f'{self.main_path}/TickerK8_app/APP_FILES/PYTHON/db/conf.json', 'r', encoding='utf-8'))
             payload = {
                 "token":conf['token'],
                 "name":'u_app'
@@ -56,7 +56,7 @@ class database():
             password=login_data['password'],
             database=login_data['database'],
             port=login_data['port'],
-            ssl={'ca':f'{self.main_path}/PYTHON/db/rds-combined-ca-bundle.pem'}
+            ssl={'ca':f'{self.main_path}/TickerK8_app/APP_FILES/PYTHON/db/rds-combined-ca-bundle.pem'}
         )
         return conn
 
@@ -147,8 +147,8 @@ class database():
                 conn = None
 
     def LoginConfiguration(self, i:str):
-        c = json.load(open(self.main_path+'/PYTHON/login_config/j_config.json', 'r', encoding='utf-8'))
-        t = json.load(open(self.main_path+'/PYTHON/login_config/j_list_translate.json', 'r', encoding='utf-8'))
+        c = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/PYTHON/login_config/j_config.json', 'r', encoding='utf-8'))
+        t = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/PYTHON/login_config/j_list_translate.json', 'r', encoding='utf-8'))
         l = c['language'] 
         n = t[l]
 

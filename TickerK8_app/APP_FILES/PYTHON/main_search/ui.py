@@ -108,14 +108,14 @@ def main_search_ui(self):
 #______________________________________________________________________________________________________________________
 
 def main_search_reload_style(self):
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
-    self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/main_search/'+_global_config['theme']+'.css')).read())
-    self.panel_exit_button.setIcon(QIcon(load_svg(self.main_path+'/STYLE/IMG/icons/main/exit_'+_global_config['theme']+'.svg', 256, 256)))
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    self.setStyleSheet(open(str(self.main_path+'/TickerK8_app/APP_FILES/STYLE/CSS/main_search/'+_global_config['theme']+'.css')).read())
+    self.panel_exit_button.setIcon(QIcon(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/icons/main/exit_'+_global_config['theme']+'.svg', 256, 256)))
 #______________________________________________________________________________________________________________________
 
 def main_search_retranslate(self):
-    _t = json.load(open(self.main_path+'/CONFIG/main_search/translate.json', 'r', encoding='utf-8'))
-    _l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    _t = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/main_search/translate.json', 'r', encoding='utf-8'))
+    _l = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.panel_search_lineedit.setPlaceholderText(_t['panel_search_lineedit'][_l])
     self.panel_type_stock_button.setText(_t['panel_type_stock_button'][_l])
     self.panel_type_etf_button.setText(_t['panel_type_etf_button'][_l])

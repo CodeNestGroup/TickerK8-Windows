@@ -3,5 +3,9 @@ from pathlib import Path
 
 def ResourcePath(i:int) -> str:
     if hasattr(sys, "_MEIPASS"):
-        return sys._MEIPASS
-    return str(Path(__file__).resolve().parents[i])
+        b = Path(sys._MEIPASS)
+    else:
+        b = Path(__file__).resolve()
+        for _ in range(i):
+            b = b.parent
+    return str(b)

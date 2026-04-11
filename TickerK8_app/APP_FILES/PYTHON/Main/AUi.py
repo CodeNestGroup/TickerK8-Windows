@@ -65,16 +65,16 @@ def MainUi(self):
 
 def MainReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/Main/BMain.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/Main/B{t}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BMain.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/B{t}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
-    self.NavSettingsB.setIcon(QIcon(LoadSvg(f'{self.Path}/APP_FILES/PYTHON/Main/i_settings_{t}.svg', 256, 256)))
+    self.NavSettingsB.setIcon(QIcon(LoadSvg(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/i_settings_{t}.svg', 256, 256)))
     self.NavSettingsB.setIconSize(self.NavSettingsB.size())
-    self.NavLogoutB.setIcon(QIcon(LoadSvg(f'{self.Path}/APP_FILES/PYTHON/Main/i_exit_{t}.svg', 256, 256)))
+    self.NavLogoutB.setIcon(QIcon(LoadSvg(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/i_exit_{t}.svg', 256, 256)))
     self.NavLogoutB.setIconSize(self.NavLogoutB.size())
 
 def MainRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Main/CMainTranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/CMainTranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.NavDefaultB.setText(t['NavDefaultB'][l])
     self.NavListObjectB.setText(t['NavListObjectB'][l])
@@ -113,12 +113,12 @@ def ListPageUi(self):
 
 def ListPageReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/Main/BListPage.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/Main/BListPage{self.Theme}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BListPage.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BListPage{self.Theme}.css', encoding='utf-8').read()
     self.OpenedW.setStyleSheet(m+c)
 
 def ListPageRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Main/CListPageRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/CListPageRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.AddObjectB.setText(t['AddObjectB'][l])
 
@@ -164,12 +164,12 @@ def ListAddPageUi(self):
 
 def ListAddPageReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/Main/BListAddPage.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/Main/BListAddPage{self.Theme}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BListAddPage.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BListAddPage{self.Theme}.css', encoding='utf-8').read()
     self.OpenedW.setStyleSheet(m+c)
 
 def ListAddPageRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Main/CListAddPageRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/CListAddPageRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.ExitB.setText(t['ExitB'][l])
 
@@ -214,12 +214,12 @@ def ListSearchPageUi(self):
 
 def ListSearchPageReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/Main/BListSearchPage.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/Main/BListSearchPage{self.Theme}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BListSearchPage.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BListSearchPage{self.Theme}.css', encoding='utf-8').read()
     self.OpenedW.setStyleSheet(m+c)
 
 def ListSearchPageRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Main/CListSearchPageRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/CListSearchPageRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.SearchE.setPlaceholderText(t['SearchE'][l])
     self.StockB.setText(t['StockB'][l])
@@ -271,12 +271,12 @@ def NewsPageUi(self):
 
 def NewsPageReloadStyle(self):
     t = self.Theme
-    m = open(f'{self.Path}/APP_FILES/PYTHON/Main/BNewsPage.css', encoding='utf-8').read()
-    c = open(f'{self.Path}/APP_FILES/PYTHON/Main/BNewsPage{self.Theme}.css', encoding='utf-8').read()
+    m = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BNewsPage.css', encoding='utf-8').read()
+    c = open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/BNewsPage{self.Theme}.css', encoding='utf-8').read()
     self.setStyleSheet(m+c)
 
 def NewsPageRetranslate(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Main/CNewsPageRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Main/CNewsPageRetranslate.json', 'r', encoding='utf-8'))
     l = self.Language
     self.NewsStockB.setText(t['NewsStockB'][l])
     self.NewsMarketB.setText(t['NewsMarketB'][l])

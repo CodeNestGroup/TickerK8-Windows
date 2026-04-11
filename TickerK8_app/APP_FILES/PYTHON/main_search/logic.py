@@ -28,10 +28,10 @@ from PyQt5.QtSvg import (
 def text_changed(self):
     """ Get config """
     _text = self.panel_search_lineedit.text()
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILESCONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     _active_filters = _global_config['search_filters']
     """ Get data """
-    database = sqlite3.connect(database=self.main_path+'/CONFIG/GLOBAL/local_data_prototype.db')
+    database = sqlite3.connect(database=self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/local_data_prototype.db')
     cursor = database.cursor()
     all_data = []
     all_data_id = []
@@ -139,26 +139,26 @@ def text_changed(self):
         market_name_label.setSizePolicy(QSizePolicy.Expanding ,QSizePolicy.Expanding)
         index_button.setText(f' {i}')
         object_name_button.setText(f'{list_object[2]}')
-        object_logo_label.setPixmap(load_svg(self.main_path+'/STYLE/IMG/'+list_object[1]+'.svg', int(object_logo_label.height()), int(object_logo_label.height())))
+        object_logo_label.setPixmap(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/'+list_object[1]+'.svg', int(object_logo_label.height()), int(object_logo_label.height())))
         if len(list_object) > 3:
             market_name_label.setText(f'{list_object[4]}')
-            market_logo_label.setPixmap(load_svg(self.main_path+'/STYLE/IMG/'+list_object[3]+'.svg', int(market_logo_label.height()), int(market_logo_label.height())))
+            market_logo_label.setPixmap(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/'+list_object[3]+'.svg', int(market_logo_label.height()), int(market_logo_label.height())))
         index_button.clicked.connect(lambda _, o=all_data_id[i-1]: add_object__lists(self, a_o=o))
 #______________________________________________________________________________________________________________________
 
 def filters_changed(self, index):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     """ Get data """
     _global_config['search_filters'][index] = not _global_config['search_filters'][index] 
-    json.dump(_global_config, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4) 
+    json.dump(_global_config, open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4) 
     filters_load(self)
     text_changed(self)
 #______________________________________________________________________________________________________________________
 
 def filters_load(self):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     _active_filters = _global_config['search_filters']
     for index, f in enumerate(_active_filters, start=0):
         if f:
@@ -169,7 +169,7 @@ def filters_load(self):
 
 def add_object__lists(self, a_o):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r'))
     """ Set deafoult  """
     self.add_object = a_o
     if self.panel_add_widget:
@@ -226,12 +226,12 @@ def add_object__lists(self, a_o):
     self.panel_add_scroll.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     self.panel_add_scroll_widget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
     """ Set text """
-    _t = json.load(open(self.main_path+'/CONFIG/main_search/translate.json', 'r', encoding='utf-8'))
+    _t = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/main_search/translate.json', 'r', encoding='utf-8'))
     _l = _global_config['language']
     self.panel_add_title_label.setText(_t['panel_add_title_label'][_l])
     self.panel_add_path_label.setText(f"{_t['panel_add_path_label'][_l]}")
     """ Set graphics """
-    self.panel_add_exit_button.setIcon(QIcon(load_svg(self.main_path+'/STYLE/IMG/icons/main/exit_'+_global_config['theme']+'.svg', 256, 256)))
+    self.panel_add_exit_button.setIcon(QIcon(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/icons/main/exit_'+_global_config['theme']+'.svg', 256, 256)))
     """ Connect functions """
     self.panel_add_exit_button.clicked.connect(lambda: add_object_lists_exit(self))
     """ Create scroll objects  """
@@ -254,7 +254,7 @@ def add_object_lists_exit(self):
 
 def add_object_section(self, choosen_list):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r'))
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r'))
     """ Set deafoult """
     self.choosen_list = choosen_list
     """ Create objects """
@@ -291,7 +291,7 @@ def add_object_section(self, choosen_list):
     _t = self.panel_add_path_label.text()
     self.panel_add_path_label.setText(f'{_t} > {self.choosen_list}')
     """ Set Graphics """
-    self.panel_add_section_exit_button.setIcon(QIcon(load_svg(self.main_path+'/STYLE/IMG/icons/main/exit_'+_global_config['theme']+'.svg', 256, 256)))
+    self.panel_add_section_exit_button.setIcon(QIcon(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/icons/main/exit_'+_global_config['theme']+'.svg', 256, 256)))
     """ Connect functions """
     self.panel_add_section_exit_button.clicked.connect(lambda: add_object_section_exit(self))
     """ Create scroll objects """
@@ -319,7 +319,7 @@ def add_object_section_exit(self):
 
 def add_object_objects(self, choosen_section):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     """ Set deafoult """
     self.choosen_section_id = choosen_section
     self.choosen_section_name = list(_global_config['object_lists'][self.choosen_list][self.choosen_section_id].keys())[0]
@@ -357,18 +357,18 @@ def add_object_objects(self, choosen_section):
     _t = self.panel_add_path_label.text()
     self.panel_add_path_label.setText(f'{_t} > {self.choosen_section_name}')
     """ Set Graphics """
-    self.panel_add_object_exit_button.setIcon(QIcon(load_svg(self.main_path+'/STYLE/IMG/icons/main/exit_'+_global_config['theme']+'.svg', 256, 256)))
+    self.panel_add_object_exit_button.setIcon(QIcon(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/icons/main/exit_'+_global_config['theme']+'.svg', 256, 256)))
     """ Connect functions """
     self.panel_add_object_exit_button.clicked.connect(lambda: add_object_objects_exit(self))
     """ Create scroll objects """
-    database = sqlite3.connect(database=self.main_path+'/CONFIG/GLOBAL/local_data_prototype.db')
+    database = sqlite3.connect(database=self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/local_data_prototype.db')
     cursor = database.cursor()
     button = QPushButton(self.panel_add_object_widget)
     button.setObjectName(f'panel_add_object_0_button')
     button.setProperty('class', 'panel_add_object_button')
     self.panel_add_object_layout.addWidget(button)
     button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-    button.setIcon(QIcon(load_svg(self.main_path+'/STYLE/IMG/icons/main/add_'+_global_config['theme']+'.svg', 256, 256)))
+    button.setIcon(QIcon(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/icons/main/add_'+_global_config['theme']+'.svg', 256, 256)))
     button.clicked.connect(lambda _, index=0: add_object_to_list(self, place=index))
     for index, o in enumerate(_global_config['object_lists'][self.choosen_list][self.choosen_section_id][self.choosen_section_name], start=1):
         table = list(o.keys())[0]
@@ -385,7 +385,7 @@ def add_object_objects(self, choosen_section):
         label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         label.setText(cursor.execute(f'SELECT name FROM {table} WHERE id like "{id_id}";').fetchall()[0][0])
-        button.setIcon(QIcon(load_svg(self.main_path+'/STYLE/IMG/icons/main/add_'+_global_config['theme']+'.svg', 256, 256)))
+        button.setIcon(QIcon(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/icons/main/add_'+_global_config['theme']+'.svg', 256, 256)))
         button.clicked.connect(lambda _, index_x=index: add_object_to_list(self, place=index_x))
     cursor.close()
     database.close()
@@ -404,10 +404,10 @@ def add_object_objects_exit(self):
 
 def add_object_to_list(self, place):
     """ Get config """
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
     conf = _global_config['object_lists'][self.choosen_list][self.choosen_section_id][self.choosen_section_name]
     conf.insert(place, self.add_object)
-    json.dump(_global_config, open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
+    json.dump(_global_config, open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'w', encoding='utf-8'), indent=4)
     self.parent.object_list_open()
     add_object_objects_exit(self)
     add_object_section_exit(self)

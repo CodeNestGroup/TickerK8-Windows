@@ -105,8 +105,8 @@ def news_widget(self, data):
     self.news_hash_title_label.setMaximumWidth(self.news_scroll.width())
     self.news_hash_title_label.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
     """ Set text """
-    _t = json.load(open(self.main_path+'/CONFIG/main_news/translate.json', 'r', encoding='utf-8'))
-    _l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    _t = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/main_news/translate.json', 'r', encoding='utf-8'))
+    _l = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.news_title_label.setText(data[0])
     self.news_date_label.setText('')
     self.news_source_title_label.setText(_t['news_source_title_label'][_l])

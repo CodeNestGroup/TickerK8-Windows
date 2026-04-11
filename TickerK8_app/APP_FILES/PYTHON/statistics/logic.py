@@ -23,7 +23,7 @@ from PyQt5.QtSvg import QSvgRenderer # Render Svg.
 """ Statistics country """
 def statisitcs_country(self):
     """ Set data """
-    database = sqlite3.connect(database=self.main_path+'/CONFIG/GLOBAL/local_data_prototype.db')
+    database = sqlite3.connect(database=self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/local_data_prototype.db')
     cursor = database.cursor()
     result = cursor.execute(f'SELECT name, icon FROM country WHERE id={self.global_config['mid_object'][1]};').fetchall()[0]
     cursor.close()
@@ -37,7 +37,7 @@ def statisitcs_country(self):
     self.main_title_label.setText(f'{result[0]}')
 #______________________________________________________________________________________________________________________
     """ Set graphics """
-    self.main_flag_label.setPixmap(load_svg(self.main_path+'/STYLE/IMG/flags'+result[1]+'.svg', int(self.height()*0.15), int(self.height()*0.15)))
+    self.main_flag_label.setPixmap(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/flags'+result[1]+'.svg', int(self.height()*0.15), int(self.height()*0.15)))
 #______________________________________________________________________________________________________________________
     """ Setup widget """
     if self.scroll_widget: # Check if main scroll have widget 
@@ -109,7 +109,7 @@ def open_gdp(self):
 """ Open natural resources """
 def open_n_r(self):
     """ Set data """
-    database = sqlite3.connect(database=self.main_path+'/CONFIG/GLOBAL/local_data_prototype.db')
+    database = sqlite3.connect(database=self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/local_data_prototype.db')
     cursor = database.cursor()
     n_r_forests_data = cursor.execute(f'''
     SELECT
@@ -636,10 +636,10 @@ def open_n_r(self):
     self.n_r_water_date_value_label.setText(f'{n_r_water_data[3]}')
 #______________________________________________________________________________________________________________________
     """ Set graphics """
-    self.n_r_forests_map_label.setPixmap(load_svg(self.main_path+'/STYLE/IMG/map_forests'+n_r_forests_data[2]+f'/{self.global_config['__theme__']}.svg', int(self.n_r_forests_widget.height()//1.25), int(self.n_r_forests_widget.height()//1.25)))
-    self.n_r_agroculture_map_label.setPixmap(load_svg(self.main_path+'/STYLE/IMG/map_agriculture'+n_r_agriculture_data[2]+f'/{self.global_config['__theme__']}.svg', int(self.n_r_agroculture_widget.height()//1.25), int(self.n_r_agroculture_widget.height()//1.25)))
-    self.n_r_minerals_map_label.setPixmap(load_svg(self.main_path+'/STYLE/IMG/map_minerals'+n_r_minerals_data[1]+f'/{self.global_config['__theme__']}.svg', int(self.n_r_minerals_widget.height()//1.25), int(self.n_r_minerals_widget.height()//1.25)))
-    self.n_r_water_map_label.setPixmap(load_svg(self.main_path+'/STYLE/IMG/map_water'+n_r_water_data[2]+f'/{self.global_config['__theme__']}.svg', int(self.n_r_water_widget.height()//1.25), int(self.n_r_water_widget.height()//1.25)))
+    self.n_r_forests_map_label.setPixmap(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/map_forests'+n_r_forests_data[2]+f'/{self.global_config['__theme__']}.svg', int(self.n_r_forests_widget.height()//1.25), int(self.n_r_forests_widget.height()//1.25)))
+    self.n_r_agroculture_map_label.setPixmap(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/map_agriculture'+n_r_agriculture_data[2]+f'/{self.global_config['__theme__']}.svg', int(self.n_r_agroculture_widget.height()//1.25), int(self.n_r_agroculture_widget.height()//1.25)))
+    self.n_r_minerals_map_label.setPixmap(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/map_minerals'+n_r_minerals_data[1]+f'/{self.global_config['__theme__']}.svg', int(self.n_r_minerals_widget.height()//1.25), int(self.n_r_minerals_widget.height()//1.25)))
+    self.n_r_water_map_label.setPixmap(load_svg(self.main_path+'/TickerK8_app/APP_FILES/STYLE/IMG/map_water'+n_r_water_data[2]+f'/{self.global_config['__theme__']}.svg', int(self.n_r_water_widget.height()//1.25), int(self.n_r_water_widget.height()//1.25)))
 #######################################################################################################################
 """ Open people """
 def open_people(self):

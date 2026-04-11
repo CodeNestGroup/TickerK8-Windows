@@ -19,7 +19,7 @@ from PyQt5.QtCore import (
 
 def news_list_widget(self):
     """ Load user settings """
-    user_setting = list(dict(json.load(open(self.main_path+'/CONFIG/GLOBAL/logged_user.json', 'r', encoding='utf-8'))).values())[self.news_type]
+    user_setting = list(dict(json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/logged_user.json', 'r', encoding='utf-8'))).values())[self.news_type]
     news_type_name = None
     result = None
     if self.news_type == 0:

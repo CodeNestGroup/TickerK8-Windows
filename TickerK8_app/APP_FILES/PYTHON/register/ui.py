@@ -116,13 +116,13 @@ def register_ui(self):
 #______________________________________________________________________________________________________________________
 
 def register_reload_style(self):
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
-    self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/register/'+_global_config['theme']+'.css')).read())
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    self.setStyleSheet(open(str(self.main_path+'/TickerK8_app/APP_FILES/STYLE/CSS/register/'+_global_config['theme']+'.css')).read())
 #______________________________________________________________________________________________________________________
 
 def register_retranslate(self):
-    _t = json.load(open(self.main_path+'/CONFIG/register/translate.json', 'r', encoding='utf-8'))
-    _l = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
+    _t = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/register/translate.json', 'r', encoding='utf-8'))
+    _l = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))['language']
     self.register_name_subtitle_label.setText(_t['register_name_subtitle_label'][_l])
     self.register_name_lineedit.setPlaceholderText(_t['register_name_lineedit'][_l])
     self.register_emial_subtitle_label.setText(_t['register_emial_subtitle_label'][_l])

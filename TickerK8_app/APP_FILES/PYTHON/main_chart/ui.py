@@ -28,6 +28,6 @@ def main_chart_ui(self):
 #______________________________________________________________________________________________________________________
 
 def main_chart_reload_style(self):
-    _global_config = json.load(open(self.main_path+'/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
-    self.setStyleSheet(open(str(self.main_path+'/STYLE/CSS/main_chart/'+_global_config['theme']+'.css')).read())
+    _global_config = json.load(open(self.main_path+'/TickerK8_app/APP_FILES/CONFIG/GLOBAL/global_config.json', 'r', encoding='utf-8'))
+    self.setStyleSheet(open(str(self.main_path+'/TickerK8_app/APP_FILES/STYLE/CSS/main_chart/'+_global_config['theme']+'.css')).read())
 #______________________________________________________________________________________________________________________

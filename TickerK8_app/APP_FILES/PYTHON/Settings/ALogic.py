@@ -20,7 +20,7 @@ def ChangeDayNight(self):
     StyleRetranslate(self)
 
 def ChangeTheme(self):
-    t = json.load(open(f'{self.Path}/APP_FILES/PYTHON/Settings/CStylePageRetranslate.json', 'r', encoding='utf-8'))
+    t = json.load(open(f'{self.Path}/TickerK8_app/APP_FILES/PYTHON/Settings/CStylePageRetranslate.json', 'r', encoding='utf-8'))
     self.Config['theme'] = t['StyleThemeThemesValueC'][self.StyleThemeThemesValueC.currentText()]
     self.Theme = self.Config['theme']
     SettingsReloadStyle(self)
