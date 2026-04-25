@@ -1,0 +1,49 @@
+#ObjectInfoS{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 12px;
+}
+#WidgetW{
+    border: 0;
+}
+#IconL{
+    border: 0;
+}
+#NameL{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+#IsoL{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+#ContinentL{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+#SubRegion{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+#InfoW{
+    border: 0;
+}
+#InfoTitleL{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+.Name{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+.Value{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}

@@ -1,0 +1,45 @@
+#RegisterW{
+    background-color: #1a1a1a;
+}
+#PasswordRequirementsL{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+#PasswordShowB{
+    color: #c3c3c3;
+    background-color: #282828;
+    border-style: #282828;
+}
+#PasswordShowB:hover{
+    background-color: #1a1a1a;
+}
+.SubTitle{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+.InputLine{
+    color: #c3c3c3;
+    background-color: #282828;
+    border-color: #282828;
+}
+.InputLine:hover{
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+.List{
+    color: #c3c3c3;
+    background-color: #282828;
+}
+.InfoLabel{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+.Button{
+    color: #c3c3c3;
+    background-color: #282828;
+    border-color: #282828;
+}
+.Button:hover{
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+}

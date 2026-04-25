@@ -1,0 +1,32 @@
+#UpdateChangelogW{
+    background-color: #f5f5f5;
+}
+#TitleL{
+    color: #2b2b2b;
+    background-color: #00000000;
+}
+#ChangelogS{
+    background-color: #e0e0e0;
+}
+#ChangelogW{
+    background-color: #00000000;
+}
+#ChangelogTitleL{
+    color: #2b2b2b;
+    background-color: #00000000;
+}
+#ChangelogDateL{
+    color: #2b2b2b;
+    background-color: #00000000;
+}
+#ChangelogTextL{
+    color: #2b2b2b;
+    background-color: #00000000;
+}
+#ExitB{
+    color: #2b2b2b;
+    background-color: #e0e0e0;
+}
+#ExitB:hover{
+    background-color: #f5f5f5;
+}

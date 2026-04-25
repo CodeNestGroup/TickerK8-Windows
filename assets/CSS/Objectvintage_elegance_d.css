@@ -1,0 +1,30 @@
+#ObjectW{
+    border-color: #1a1a1a;
+    background-color: #1a1a1a;
+}
+#IconL{
+    border-color: #00000000;
+    background-color: #1d1d1d;
+}
+#TickerL{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+#ChartW{
+    background-color: #1d1d1d;
+}
+#InfoTitleL{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+#InfoW{
+    background-color: #1d1d1d;
+}
+.Name{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
+.Value{
+    color: #c3c3c3;
+    background-color: #00000000;
+}
