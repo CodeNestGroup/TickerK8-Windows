@@ -1,0 +1,30 @@
+#MainW{
+    background-color: #00000000;
+}
+#NavW{
+    background: qlineargradient( x1:0, y1:0, x2:0, y2:1, stop:0 #282828, stop:1 #00000000);
+}
+.NavButton{
+    color: #c3c3c3;
+    border-color: #282828;
+    background-color: #282828;
+}
+.NavButton:hover{
+    border-color: #1a1a1a;
+    background-color: #1a1a1a;
+}
+.FuncButton{
+    color: #c3c3c3;
+    border-color: #282828;
+    background-color: #282828;
+}
+.FuncButton:hover{
+    border-color: #1a1a1a;
+    background-color: #1a1a1a;
+}
+#OpenedW{
+    background-color: #00000000;
+}
+#FooterW{
+    background: qlineargradient( x1:0, y1:0, x2:0, y2:1, stop:0 #00000000, stop:1 #282828);
+}

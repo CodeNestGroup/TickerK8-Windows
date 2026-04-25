@@ -1,0 +1,23 @@
+{
+    "NameSubtitleL": ["Name", "Nazwa"],
+    "NameL": ["Name", "Nazwa"],
+    "NameInfoL": [["Type name", "Wpisz nazwe"], ["Name is already taken", "Nazwa jest juz zajeta"]],
+    "EmialSubtitleL": ["E-mail", "E-mail"],
+    "EmialL": ["E-mail", "E-mail"],
+    "EmialConfirmL": ["Confirm e-mail", "Potwierdź e-mail"],
+    "EmailInfoL": [["Type email", "Wpisz email"], ["Email is already taken", "Email jest juz zajety"], ["Confirm line error", " Blad potwierdzenia"]],
+    "PhonenumberSubtitleL": ["Phone number", "Numer telefonu"],
+    "PhonenumberL": [["Phone", "Telefon"], ["Number exists", "Numer istnieje"], ["Intigers", "Cyfry"]],
+    "CountrySubtitleL": ["Country", "Kraj"],
+    "PasswordSubtitleL": ["Password", "Hasło"],
+    "PasswordL": ["Password", "Hasło"],
+    "PasswordRequirementsL": [
+        ["Minimum 8 signs, use phrases,\nspecial characters and numbers", "Minimum 8 znaków, używaj fraz,\n znaki specjalne i cyfry"], 
+        ["Confirm line error", "Blad potwierdzenia"],
+        ["Password requirments error", "Blad wymagan hasla"]
+    ],
+    "PasswordShowB": [["Hide", "Schowaj"], ["Schow", "Pokarz"]],
+    "PasswordConfirmL": ["Confirm password", "Potwierdź hasło"],
+    "RegisterB": [["Register", "Zarejestruj się"], ["Success", "Sukces"]],
+    "ExitB": ["Exit", "Wyjdź"]
+}

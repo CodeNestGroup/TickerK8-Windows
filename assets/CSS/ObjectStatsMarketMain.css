@@ -1,0 +1,23 @@
+#ObjectStatsS{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 12px;
+}
+#WidgetW{
+    border: 0;
+}
+.Title{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+.Name{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}
+.Value{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}

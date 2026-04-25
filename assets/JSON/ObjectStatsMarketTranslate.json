@@ -1,0 +1,15 @@
+{
+    "MarketStatisticsTitleL": ["Market statistics", "Statystyki rynku"],
+    "ListedCompaniesMainNameL": ["Listed companies (main market)", "Spółki notowane (rynek główny)"],
+    "ListedCompaniesSecondaryNameL": ["Listed companies (secondary market)", "Spółki notowane (rynek wtórny)"],
+    "TotalListedNameL": ["Total listed", "Łączna liczba notowanych"],
+    "DailyTradingVolNameL": ["Daily trading volume", "Dzienny wolumen obrotu"],
+    "DailyTradingValNameL": ["Daily trading value", "Dzienna wartość obrotu"],
+    "DailyTransactionCountNameL": ["Daily transaction count", "Dzienna liczba transakcji"],
+    "SectorTradingDataTitleL": ["Sector trading data", "Dane obrotu według sektorów"],
+    "FinancialSectorVolNameL": ["Financial sector volume", "Wolumen sektora finansowego"],
+    "TechnologySectorVolNameL": ["Technology sector volume", "Wolumen sektora technologicznego"],
+    "EnergySectorVolNameL": ["Energy sector volume", "Wolumen sektora energetycznego"],
+    "IndustrialSectorVolNameL": ["Industrial sector volume", "Wolumen sektora przemysłowego"],
+    "ConsumerSectorVolNameL": ["Consumer sector volume", "Wolumen sektora konsumenckiego"]
+}

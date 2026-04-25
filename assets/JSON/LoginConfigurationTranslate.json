@@ -1,0 +1,25 @@
+{
+    "TitleL": ["User config", "Konfiguracja użytkownika"],
+    "InfoL": [
+        [
+            "Setup application settings like:\n- Language,\n- Theme",
+            "",
+            "Set subscription plan",
+            "",
+            "Accept regulations and save config",
+            ""
+        ],
+        [
+            "Ustawienie ustawień aplikacji takich jak:\n-Język,\n- Motyw",
+            "",
+            "Ustaw plan subskrypcji",
+            "",
+            "Zaakcpetuj regulamin i zapisz ustawienia",
+            ""
+        ]
+    ],
+    "LeftB": ["L", "L"],
+    "ExitB": ["E", "E"],
+    "RightB": ["R", "R"],
+    "AcceptB": ["A", "A"]
+}

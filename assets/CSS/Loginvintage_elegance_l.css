@@ -1,0 +1,41 @@
+#LoginW{
+    background-color: #00000000;
+}
+.InputL{
+    color: #2b2b2b;
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+.InputL:hover{
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+}
+#LoginB{
+    color: #2b2b2b;
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+#LoginB:hover{
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+}
+#RegisterB{
+    color: #2b2b2b;
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+#RegisterB:hover{
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+}
+#WelcomeTitleL{
+    color: #303030;
+    background-color: #00000000;
+}
+#WelcomeSubL{
+    color: #303030;
+    background-color: #00000000;
+}
+#WelcomeIconL{
+    background-color: #00000000;
+}

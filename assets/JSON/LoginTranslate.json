@@ -1,0 +1,18 @@
+{
+    "LoginL": [
+        "Login",
+        "Login"
+    ],
+    "PasswordL": [
+        "Password",
+        "Hasło"
+    ],
+    "LoginB": [
+        "Sign in",
+        "Zaloguj się"
+    ],
+    "RegisterB": [
+        "Register",
+        "Zarejestrój się"
+    ]
+}

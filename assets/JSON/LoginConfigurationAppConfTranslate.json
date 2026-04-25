@@ -1,0 +1,6 @@
+{
+    "LanguageSubtitleL": ["Language", "Język"],
+    "LanguageC": ["English-English", "Polish-Polski"],
+    "ThemeSubtitleL": ["Theme", "Motyw"],
+    "ThemeC": {"Vintage Elegance Light":"vintage_elegance_l", "Vintage Elegance Dark": "vintage_elegance_d"}
+}
