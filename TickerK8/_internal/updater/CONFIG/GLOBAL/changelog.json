@@ -1,5 +1,0 @@
-{
-  "name": "TickerK8 PRE ALPHA 0.0.5.0",
-  "published_at": "2026-04-10T10:00:00Z",
-  "body": "New Update Overview\n\nThis update introduces significant improvements in performance, structure, and usability.\n\nChanges and Improvements:\n\nThe previous file-based structure (__00__main.py, __01__setobjectname, etc.) has been replaced with a clearer and more maintainable architecture: AStructure, AUi, and ALogic.\nObjects are now created only when needed instead of all at once, resulting in improved performance.\nAdapted the application to work with an online database (AWS RDS)\nAdded a new authentication system (login and registration)\nImplemented a new data display system"
-}
