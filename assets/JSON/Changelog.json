@@ -1,5 +1,0 @@
-{
-  "name": "TickerK8 PRE ALPHA 0.0.6.0",
-  "published_at": "2026-04-25T20:00:00Z",
-  "body": "Changelog\n\n- Migracja z PyQt5 na PySide6\n- Dodano README z instrukcją instalacji i użycia\n- Uproszczona instalacja i aktualizacja aplikacji\n- Możliwość uruchamiania aplikacji jako jeden plik wykonywalny lub biblioteka\n- Dodano build przez PyInstaller"
-}
